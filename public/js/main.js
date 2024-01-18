@@ -66,12 +66,12 @@ $(document).ready(function () {
       let res = [];
       for (var steamid in this.info.allplayers) {
         let player = this.info.allplayers[steamid];
-        if (player.observer_slot == 0) player.observer_slot = 10;
+        //if (player.observer_slot == 0) player.observer_slot = 10;
         player.steamid = steamid;
         res.push(player);
       }
       res.sort(function (a, b) {
-        return a.observer_slot - b.observer_slot;
+        return a.observer_slot - b.observer_slot + 1;
       });
       return res;
     },
@@ -148,8 +148,8 @@ $(document).ready(function () {
       return false;
     },
     getPlayer: function (slot) {
-      slot = parseInt(slot);
-      if (!(slot >= 0 && slot <= 10)) return false;
+      slot = parseInt(slot)+1;
+      if (!(slot >= 0 && slot <= 11)) return false;
       return slotted[slot];
     },
     phase: function () {

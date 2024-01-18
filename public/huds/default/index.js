@@ -846,15 +846,13 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
         .addClass(dead ? "dead" : "");
     });
   }
-
-  if (slot >= 1 && slot <= 5) {
-    $top.find("#player_alias_text").text(slot + "| " + player.name);
+  var adjustSlot = slot + 1;
+  if (slot >= 0 && slot <= 4) {
+    $top.find("#player_alias_text").text(adjustSlot + "| " + player.name);
+  } else if (adjustSlot == 10) {
+    $top.find("#player_alias_text").text(player.name + " |0");
   } else {
-    if (slot == 10) {
-      $top.find("#player_alias_text").text(player.name + " |0");
-    } else {
-      $top.find("#player_alias_text").text(player.name + " |" + slot);
-    }
+    $top.find("#player_alias_text").text(player.name + " |" + adjustSlot);
   }
 
   $kda_money.find("#player_kills_k").css("color", side_color);
