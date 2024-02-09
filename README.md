@@ -2,8 +2,6 @@
 
 Based off a fork from [osztenkurden](https://github.com/osztenkurden)
 
-Update: Hi all, osztenkurden, myself and many others are working on a completely new tool that will be much better than this current one. Please stay tuned for it, we are working on it in spare time as we don't get paid for this.
-
 # Disclaimer
 
 I am making this a free available download for you so please don't go saying you created this.
@@ -19,7 +17,7 @@ Also, any support would be greatly appreciated for the time I have spent on this
 
 ## How does it work?
 
-Basically, CS:GO is streaming data to local app-server, that transforms data and then load it to local webpage.
+Basically, CS2 is streaming data to local app-server, that transforms data and then load it to local webpage.
 
 ## To-do before running
 
