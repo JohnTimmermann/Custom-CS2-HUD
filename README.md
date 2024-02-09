@@ -1,14 +1,10 @@
 # CS:GO Observer Custom HUD
 
-Based off a fork from [osztenkurden](https://github.com/osztenkurden)
+Based off a fork from [kyrunic1/](https://github.com/kyrunic1/)
 
 # Disclaimer
 
-I am making this a free available download for you so please don't go saying you created this.
-Best contact is [Twitter](https://twitter.com/KomodoAU). 
-Also, any support would be greatly appreciated for the time I have spent on this project!
-
-[![Paypal donate](https://www.paypalobjects.com/en_US/PL/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CUYNSHWEEC2HG&currency_code=AUD&source=url)
+Best contact is [Twitter](https://twitter.com/JTMythic). 
 
 # Examples
 
