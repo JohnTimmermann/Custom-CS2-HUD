@@ -4,12 +4,13 @@ Based off a fork from [kyrunic1](https://github.com/kyrunic1/)
 I am taking the work he has done and adding on top of it. Mainly plan on trying to make the code more readable for new people and make the default hud look a little better so more people can use it.
 
 # Features I want to add:
-I am going to be adding a few things to the default hud. First being a Players Alive counter (i.e. Players Alive: 5v5)
+I am going to be adding a few things to the default hud. First being a Players Alive counter (i.e. Players Alive: 5v5), then delayed red health bar when a player takes damage, number slots for each player, and a few other things.
+Hopefully it ends up looking very nice and lets a lot of people use it in their streams!
     
 
 # Disclaimer
 
-Best contact is [Twitter](https://twitter.com/JTMythic). 
+Best contact is twitter: [@JTMythic](https://twitter.com/JTMythic). 
 
 # Examples
 
