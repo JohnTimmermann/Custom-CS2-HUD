@@ -462,6 +462,62 @@ body {
   font-weight: normal;
   color: var(--dev-purple);
 }
+/* Start Players Alive section  */
+
+#players_alive {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  opacity: 1;
+  transition: opacity 1s;
+}
+#PA_title_container {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  height: 20px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+#PA_counter_countainer {
+  display: flex;
+  height: 45px;
+}
+#PA_left_team_counter {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#PA_right_team_counter {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#PA_vs_counter {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/* End Players Alive section  */
 
 #observed {
   width: 620px;

@@ -66,6 +66,7 @@ function updatePage(data) {
   updatePlayers(players, observed, phase, previously);
   updateTeamValues(teams.left, teams.right);
   countNades(teams.left, teams.right);
+  playersAlive(teams);
   freezetime = round.phase == "freezetime";
   last_round = round_now;
 }
@@ -786,6 +787,26 @@ function fillPlayers(teams, observed, phase, previously) {
     }
   }
 }
+//Function for count how many players are alive
+
+function playersAlive(teams) {
+  leftCount = 0; //Set count to 0
+  for (i = 0; i < teams.left.players.length; i++) { // for loop to based on the length of left teams players
+    if (teams.left.players[i].state.health > 0) { //If a player on the left teams health > 0
+      leftCount++; // Add 1 to count
+    }
+    $("#PA_left_team_counter").text(leftCount); //add value of leftCount as text to the left team counter
+  }
+
+  //Now doing the same thing as above but for the right team
+  rightCount = 0;
+  for (i = 0; i < teams.right.players.length; i++) {
+    if (teams.right.players[i].state.health > 0) {
+      rightCount++;
+    }
+    $("#PA_right_team_counter").text(rightCount);
+  }
+  }
 
 function fillPlayer(player, nr, side, observed, phase, previously) {
   let slot = player.observer_slot;
