@@ -8,7 +8,7 @@
   "DisplayTeamFlags": false,
   "DisplayPlayerFlags": true,
   "AvatarDirectory": "./public/files/avatars/",
-  "SpecialEvent": "SHOWMATCH",
+  "SpecialEvent": "SHOWMATCH", 
   "LeftImage": "/files/league/league.png",
   "LeftPrimary": "Primary League Text",
   "LeftSecondary": "Secondary League Text",
