@@ -69,7 +69,8 @@ Basically, CS2 is streaming data to local app-server, that transforms data and t
 - Install NodeJS (nodejs.org)
 - Download this repo somewhere
 - Start RUN file (.bat for Windows, .sh for Linux)
-- Run Overlay Exe from here: [OVERLAY DOWNLOAD](https://drive.google.com/file/d/1uByNiYqkzGJ-8JftDrm29XTUM0En375_/view?usp=sharing)
+  
+- (I have now included this file in the repo. Run cs2-overlay-for-custom-hud.exe - Shortcut, leaving the link as a fallback just in case) Run Overlay Exe from here: [OVERLAY DOWNLOAD](https://drive.google.com/file/d/1uByNiYqkzGJ-8JftDrm29XTUM0En375_/view?usp=sharing)
 - Ensure that in the Overlay exe folder, there is a config.json file with the following:
 
 ```javascript
