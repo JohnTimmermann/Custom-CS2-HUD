@@ -531,8 +531,7 @@ function updateStatePaused(phase, type, previously) {
   $("#players_right #box_utility").slideDown(500);
   $("#alert_middle").removeClass();
   if (type == "paused") {
-    if (checkPrev(previously, "freezetime") || checkPrev(previously, "live") || checkPrev(previously, "defuse") || checkPrev(previously, "bomb"))
-      animateRoundTimer("pause_active", false);
+    if (checkPrev(previously, "freezetime") || checkPrev(previously, "live") || checkPrev(previously, "defuse") || checkPrev(previously, "bomb")) animateRoundTimer("pause_active", false);
     $("#alert_middle #pole_1_middle").css("background-color", teams.left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
     $("#alert_middle #pole_2_middle").css("background-color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
     $("#alert_middle #alert_text_middle")
@@ -623,7 +622,6 @@ function fillObserved(obs) {
       _img = teams.right.logo;
     }
   }
-
   if (disp_avatars) {
     if (disp_player_avatars) {
       if (obs.hasOwnProperty("avatar")) {
@@ -830,43 +828,6 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
 
   $top.find("#player_alias_text").css("color", dead ? COLOR_WHITE_HALF : COLOR_WHITE);
 
-  $player.find("#player_image").removeClass("dead");
-  if (disp_player_avatars) {
-    if (player.hasOwnProperty("avatar")) {
-      // Custom Set Avatar
-      if (player.avatar)
-        $player
-        .find("#player_image")
-        .attr("src", "/storage/" + player.avatar)
-        .addClass(dead ? "dead" : "");
-    } else {
-      // Just Use Team Logo
-      if (team == "ct") {
-        if (teams.left.side == "ct") {
-          _img = teams.left.logo;
-        } else {
-          _img = teams.right.logo;
-        }
-      } else if (team == "t") {
-        if (teams.left.side == "t") {
-          _img = teams.left.logo;
-        } else {
-          _img = teams.right.logo;
-        }
-      }
-      $player
-        .find("#player_image")
-        .attr("src", "/storage/" + _img)
-        .addClass(dead ? "dead" : "");
-    }
-  } else {
-    loadAvatar(steamid, function () {
-      $player
-        .find("#player_image")
-        .attr("src", "/av/" + steamid)
-        .addClass(dead ? "dead" : "");
-    });
-  }
   $top.find("#player_alias_text").text(player.name);
  
   //Start Player Slot Section
