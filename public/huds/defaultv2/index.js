@@ -1,7 +1,7 @@
-const COLOR_CT = "rgba(87, 136, 168, 1.0)";
-const COLOR_T = "rgba(193, 149, 17, 1.0)";
-const COLOR_NEW_CT = "rgba(90, 184, 244, 1.0)";
-const COLOR_NEW_T = "rgba(240, 201, 65, 1.0)";
+const COLOR_CT = "rgba(1, 159, 253, 1.0)";
+const COLOR_T = "rgba(255, 160, 0, 1.0)";
+const COLOR_NEW_CT = "rgba(1, 159, 253, 1.0)";
+const COLOR_NEW_T = "rgba(255, 160, 0, 1.0)";
 const COLOR_RED = "rgba(242, 34, 34, 1.0)";
 const COLOR_MAIN_PANEL = "rgba(12, 15, 18, 0.75)";
 const COLOR_SUB_PANEL = "rgba(12, 15, 18, 0.6)";
@@ -817,7 +817,9 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
   let obs_slot = observed.observer_slot;
   let dead = stats.health == 0;
   let health_color = stats.health <= 20 ? COLOR_RED : team == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
-  let alt_health_color = stats.health <= 20 ? COLOR_RED : team == "ct" ? COLOR_CT : COLOR_T;
+  //You can change the stats.health <= 0 to 20 if you want their health bar to be red when they are 20hp or less,
+  //I don't like this so I changed the value to 0 so that it just uses team colors
+  let alt_health_color = stats.health <= 0 ? COLOR_RED : team == "ct" ? COLOR_CT : COLOR_T;
   let side_color = team == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
 
   let $player = $("#" + side).find("#player" + (nr + 1));
@@ -1341,6 +1343,11 @@ function checkGuns(weapons) {
 function updateTeamValues(left, right) {
   let left_color = left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
   let right_color = right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
+
+  //Players alive team colors
+  $("#PA_left_team_counter").css("color", left_color);
+  $("#PA_right_team_counter").css("color", right_color);
+
   $("#players_left #money_text").css("color", left_color);
   $("#players_left #money_value").text("$" + left.team_money);
   $("#players_right #money_text").css("color", right_color);

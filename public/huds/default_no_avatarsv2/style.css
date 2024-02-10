@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css?family=Manjari&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /*New default Font */
-@import url("https://cdn1.api.esl.tv/fonts/esl2019.css"); /*Added for ESL Challenger League. Can use other fonts but I believe most people will like this one. */
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); /*New default Font */
+
 
 /* Notes */
+/* I am adding a lot of comments as reminders to myself and others why I made the changes I did, even if they seem obvious */
 /* I have commented out all the font familys in each section so that everything uses only the one in the body. I left them commented so people know they can change specifics ones if they would like  */
 
 html,
 body {
   margin: 0;
   padding: 0;
-  /* font-family: "Manjari", sans-serif; */ 
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  /* font-family: 'ESL Legend', ESL Legend Bold; */
   color: #fafafa;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -1491,8 +1491,8 @@ body {
   z-index: 1;
   text-align: center;
   top: 23px;
-  line-height: 22px;
-  font-size: 20px;
+  line-height: 24px;
+  font-size: 19px;
 }
 
 #players_left .player_slot_number {
@@ -1529,11 +1529,26 @@ body {
 #players_right .player_section_top {
   right: 5px;
 }
+.player_redbar {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: red;
+  transition: width 1s 0.5s;
+}
+#players_right .player_redbar {
+  float: right;
+}
+
+#players_left .player_redbar {
+  float: left;
+}
 
 .player_health_bar {
   width: 100%;
   height: 100%;
   position: relative;
+  top: -35px;
 }
 
 #players_right .player_health_bar {
@@ -2722,10 +2737,10 @@ body {
   --white-half: rgba(250, 250, 250, 0.5);
   --color-moneys: #a7d32e;
   --dev-purple: rgba(200, 0, 255, 1);
-  --color-t: #c19511;
-  --color-ct: #5788a8;
-  --color-new-t: #f0c941;
-  --color-new-ct: #5ab8f4;
+  --color-t: rgba(255, 160, 0, 1.0);
+  --color-ct: rgba(1, 159, 253, 1.0);
+  --color-new-t: rgba(255, 160, 0, 1.0);
+  --color-new-ct: #rgba(1, 159, 253, 1.0);
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
 }
