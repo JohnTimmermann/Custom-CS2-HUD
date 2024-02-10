@@ -891,6 +891,7 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
     $bottom.find("#player_armor_image").css("opacity", 0);
     $top.find("#player_health_text").css("opacity", 0);
     $player.find(".player_dead").css("opacity", 1);
+    $top.find(".player_redbar").css("opacity", 0);
     if (side.substr(8) == "left") {
       $player.find("#player_alias_text").css("left", "-35px");
       $player.find("#player_current_money_text").css("left", "-55px");
@@ -907,6 +908,7 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
     $bottom.find("#player_armor_image").css("opacity", 1);
     $top.find("#player_health_text").css("opacity", 1);
     $player.find(".player_dead").css("opacity", 0);
+    $top.find(".player_redbar").css("opacity", 1);
     if (side.substr(8) == "left") {
       $player.find("#player_alias_text").css("left", "0px");
       $player.find("#player_current_money_text").css("left", "1px");
@@ -952,9 +954,11 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
   // let gradient_double = "linear-gradient(to " + side.substr(8) + ", rgba(0,0,0,0) " + (100 - stats.health) + "%, " + health_color + "0% " + (50 - stats.health) + "%" + ", " + alt_health_color + " 100%)";
   // ! gradient_single works in browser and on the overlay
   let gradient_single = "linear-gradient(to " + side.substr(8) + ", rgba(0,0,0,0) " + (100 - stats.health) + "%, " + alt_health_color + " " + (100 - stats.health) + "%)";
+  let redbar = (stats.health) + "%";
 
   $top.find(".player_health_bar").css("background", gradient_single);
   $top.find("#player_health_text").text(stats.health);
+  $top.find(".player_redbar").css("width", redbar);
 
   let armor_icon = $bottom.find("#player_armor_image");
   armor_icon.removeClass();
