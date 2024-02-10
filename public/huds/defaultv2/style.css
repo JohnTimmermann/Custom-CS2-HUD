@@ -1536,7 +1536,14 @@ body {
   height: 100%;
   position: relative;
   background-color: red;
-  transition: width 1s .05s;
+  transition: width 1s 0.5s;
+}
+#players_right .player_redbar {
+  float: right;
+}
+
+#players_left .player_redbar {
+  float: left;
 }
 .player_health_bar {
   width: 100%;
@@ -1550,13 +1557,6 @@ body {
 }
 
 #players_left .player_health_bar {
-  float: left;
-}
-#players_right .player_redbar {
-  float: right;
-}
-
-#players_left .player_redbar {
   float: left;
 }
 
