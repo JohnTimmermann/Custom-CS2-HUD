@@ -3,8 +3,8 @@ const COLOR_T = "rgba(255, 160, 0, 1.0)";
 const COLOR_NEW_CT = "rgba(1, 159, 253, 1.0)";
 const COLOR_NEW_T = "rgba(255, 160, 0, 1.0)";
 const COLOR_RED = "rgba(242, 34, 34, 1.0)";
-const COLOR_MAIN_PANEL = "rgba(12, 15, 18, 0.75)";
-const COLOR_SUB_PANEL = "rgba(12, 15, 18, 0.6)";
+const COLOR_MAIN_PANEL = "rgba(0, 0, 0, 0.75)";
+const COLOR_SUB_PANEL = "rgba(0, 0, 0, 0.5)";
 const COLOR_GRAY = "rgba(191, 191, 191, 1.0)";
 const COLOR_WHITE = "rgba(250, 250, 250, 1.0)";
 const COLOR_WHITE_HALF = "rgba(250, 250, 250, 0.5)";
@@ -15,6 +15,7 @@ const PLAYER_BLUE = "rgba(104, 163, 229, 1.0)";
 const PLAYER_YELLOW = "rgba(230, 241, 61, 1.0)";
 const PLAYER_PURPLE = "rgba(128, 60, 161, 1.0)";
 const DEV_PURPLE = "rgba(200, 0, 255, 1.0)";
+
 
 var teams = {
   left: {},
