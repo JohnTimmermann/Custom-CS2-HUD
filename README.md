@@ -22,8 +22,7 @@ Best contact is twitter: [@JTMythic](https://twitter.com/JTMythic).
 
 # Examples
 
-![Ex1](https://imgur.com/a/EBSa9MU)
-
+![Ex1](https://i.imgur.com/wk31ES9.png)
 ## How does it work?
 
 Basically, CS2 is streaming data to local app-server, that transforms data and then load it to local webpage.
