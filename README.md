@@ -18,7 +18,7 @@ Hopefully it ends up looking very nice and lets a lot of people use it in their 
 
 # Disclaimer
 
-Best contact is twitter: [@JTMythic](https://twitter.com/JTMythic). 
+Best contact is discord: not_jt
 
 # Examples
 
