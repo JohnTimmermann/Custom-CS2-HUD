@@ -1,30 +1,28 @@
 # CS2 Observer Custom HUD
 
-Based off a fork from [kyrunic1](https://github.com/kyrunic1/)
-I am taking the work he has done and adding on top of it. Mainly plan on trying to make the code more readable for new people and make the default hud look a little better so more people can use it.
+Based off a fork from [osztenkurden](https://github.com/osztenkurden), [dionpirotta](https://github.com/dionpirotta), [kyrunic1](https://github.com/kyrunic1/)
+I am taking the work they have done and adding on top of it. Mainly plan on trying to make the code more readable for new people and make the default hud look a little better so more people can use it.
 
 # Features I want to add:
 I am going to be adding a few things to the default hud.
 
-    Players Alive counter (i.e. Players Alive: 5v5)
-    Delayed red health bar when a player takes damage
-    Observed player healthbar
-    Number slots for each player
-    Map picks (This takes a lot more effort as I have to add things to the admin panel)
-    Make admin panel look a bit better.
+- Players Alive counter (i.e. Players Alive: 5v5) - COMPLETED
+- Delayed red health bar when a player takes damage - COMPLETED
+- Observed player healthbar - COMPLETED
+- Number slots for each player - COMPLETED
+- Map picks (This takes a lot more effort as I have to add things to the admin panel)
+- Make admin panel look a bit better.
 
 Hopefully it ends up looking very nice and lets a lot of people use it in their streams!
     
 
 # Disclaimer
 
-Best contact is twitter: [@JTMythic](https://twitter.com/JTMythic). 
+Best contact is discord: not_jt
 
 # Examples
 
-![Ex1](https://i.imgur.com/u70Z8XJ.png)
-![Ex2](https://i.imgur.com/Ok5Jm1V.png)
-
+![Ex1](https://i.imgur.com/wk31ES9.png)
 ## How does it work?
 
 Basically, CS2 is streaming data to local app-server, that transforms data and then load it to local webpage.
@@ -34,8 +32,8 @@ Basically, CS2 is streaming data to local app-server, that transforms data and t
 - Node.js needs to be installed
 - public/files/cfg/gamestate_integration_observerspectator.cfg needs to be placed in cfg folder in CS:GO location
 - public/files/cfg/observer.cfg needs to be placed in cfg folder in CS:GO location
-- CS:GO needs to run on Fullscreen Windowed (I know people may dislike it, but since it's only for observation, soo...)
-- After running CS:GO and connecting to match (or replaying a demo, you can use this in it too), type to console `exec observer.cfg`, it makes everything default disappear besides map and killfeed (can use `exec observer_off.cfg` to turn back to normal)
+- CS2 needs to run on Fullscreen Windowed (I know people may dislike it, but since it's only for observation, soo...)
+- After running CS2 and connecting to match (or replaying a demo, you can use this in it too), type to console `exec observer.cfg`, it makes everything default disappear besides map and killfeed (can use `exec observer_off.cfg` to turn back to normal)
 - Ensure everything in the `config.json` file is filled out
 
 ## Configuration
@@ -110,6 +108,8 @@ It might be useful for bigger streaming workspaces, like for setups with differe
 ## Credits
 
 [osztenkurden](https://github.com/osztenkurden) - Original Repo Creator
+[dionpirotta](https://github.com/dionpirotta) - Improved off of original a lot
+[kyrunic1](https://github.com/kyrunic1) - Kept old version updated
 
 ## License
 
