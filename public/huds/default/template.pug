@@ -82,6 +82,16 @@ html
           #alert_text_middle
             |ALERT TEXT
           #pole_2_middle
+
+      //- Players alive section
+      #players_alive
+        #PA_title_container Players Alive
+        #PA_counter_countainer
+          #PA_left_team_counter 0
+          #PA_vs_counter VS
+          #PA_right_team_counter 0
+      //- End Players alive section
+      
       #observed
         #obs_avatar
           img#obs_img
@@ -183,10 +193,12 @@ html
         #player_section
           #player1
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar // Side bars - I personally dont think we need them.
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -243,10 +255,12 @@ html
                   #player_spent_text -$8450
           #player2
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -303,10 +317,12 @@ html
                   #player_spent_text -$8450         
           #player3
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -363,10 +379,12 @@ html
                   #player_spent_text -$8450
           #player4
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -423,10 +441,12 @@ html
                   #player_spent_text -$8450
           #player5
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -524,10 +544,12 @@ html
         #player_section
           #player1
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar  
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -584,10 +606,12 @@ html
                   #player_spent_text -$8450
           #player2
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -644,10 +668,12 @@ html
                   #player_spent_text -$8450     
           #player3
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -704,10 +730,12 @@ html
                   #player_spent_text -$8450
           #player4
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
@@ -764,10 +792,12 @@ html
                   #player_spent_text -$8450
           #player5
             .player_main_holder
-              .player_side_bar
+              //- .player_side_bar
+              .player_slot_number
               .player_image_holder
                 img#player_image
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100

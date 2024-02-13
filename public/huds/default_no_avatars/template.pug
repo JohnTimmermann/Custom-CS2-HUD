@@ -82,6 +82,16 @@ html
           #alert_text_middle
             |ALERT TEXT
           #pole_2_middle
+     
+      //- Players alive section
+      #players_alive
+        #PA_title_container Players Alive
+        #PA_counter_countainer
+          #PA_left_team_counter 0
+          #PA_vs_counter VS
+          #PA_right_team_counter 0
+      //- End Players alive section
+
       #observed
         #obs_avatar
           img#obs_img
@@ -92,21 +102,32 @@ html
           #obs_alias
             #obs_alias_text
               |PLAYER ALIAS
-            #obs_realname_text
+            //- I do not personally like the real names so I disable them
+            //- #obs_realname_text 
               |PLAYER REAL NAME
-          #obs_country
+          //- I do not personally care to show country flags
+          //- #obs_country
             img#obs_country_img
-        #obs_lane3
-          #obs_lane3_left_pole
-          #obs_left_section
-            #obs_health_section
-              #obs_health_img
-              #obs_health_text
-                |100
-            #obs_armor_section
+          #obs_armor_section
               #obs_armor_img
-              #obs_armor_text
-                |100
+              //- I don't think that Armor text is needed.
+              //- #obs_armor_text
+              //-   |100
+          #obs_top_right
+            #obs_bullets_section
+            #obs_ammo_section
+              #obs_clip
+                |150
+              #obs_reserve
+                |/300
+        #obs_lane3
+          //- #obs_lane3_left_pole
+          #obs_bottom_right
+            #obs_nades
+              #obs_nade1
+              #obs_nade2
+              #obs_nade3
+              #obs_nade4
           #obs_middle_section
             #obs_bomb_kit
             #obs_round_kills
@@ -127,22 +148,23 @@ html
                 |D
               #obs_deaths_text
                 |0
-            #obs_nades
-              #obs_nade1
-              #obs_nade2
-              #obs_nade3
-              #obs_nade4
-          #obs_right_section
-            #obs_bullets_section
-            #obs_ammo_section
-              #obs_clip
-                |150
-              #obs_reserve
-                |/300
-          #obs_lane3_right_pole
+            #obs_hp_section
+              #obs_health_img
+                #obs_health_text
+                  |100
+              #obs_hpblock1
+                #obs_hpbar1
+              #obs_hpblock2
+                #obs_hpbar2
+              #obs_hpblock3
+                #obs_hpbar3
+              #obs_hpblock4
+                #obs_hpbar4
+
       #players_left
         #box_section
-          #box_top
+          //- This is the section for The league box and casters box. I think they are too much personally so I disable them.
+          //- #box_top
             #box_img
               img#box_image
             #box_main
@@ -183,13 +205,15 @@ html
         #player_section
           #player1
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar // Side bars - I personally dont think we need them.
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -241,13 +265,15 @@ html
                   #player_spent_text -$8450
           #player2
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -299,13 +325,15 @@ html
                   #player_spent_text -$8450         
           #player3
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -357,13 +385,15 @@ html
                   #player_spent_text -$8450
           #player4
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -415,13 +445,15 @@ html
                   #player_spent_text -$8450
           #player5
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -473,7 +505,8 @@ html
                   #player_spent_text -$8450
       #players_right
         #box_section
-          #box_top
+          //- This is the section for The league box and casters box. I think they are too much personally so I disable them.
+          //- #box_top
             #box_img
               img#box_image
             #box_main
@@ -514,13 +547,15 @@ html
         #player_section
           #player1
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -572,13 +607,15 @@ html
                   #player_spent_text -$8450
           #player2
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -630,13 +667,15 @@ html
                   #player_spent_text -$8450     
           #player3
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -688,13 +727,15 @@ html
                   #player_spent_text -$8450
           #player4
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom
@@ -746,13 +787,15 @@ html
                   #player_spent_text -$8450
           #player5
             .player_main_holder
-              .player_side_bar
+              .player_slot_number
+              //- .player_side_bar 
               .player_section_top
+                .player_redbar
                 .player_health_bar
                 .player_health
                   #player_health_text 100
                 .player_alias
-                  #player_alias_text 1| Player Name Here
+                  #player_alias_text Player Name Here
                 .player_weapon_primary
                   img#player_weapon_primary_img
               .player_section_bottom

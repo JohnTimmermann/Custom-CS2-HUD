@@ -1,10 +1,10 @@
-const COLOR_CT = "rgba(87, 136, 168, 1.0)";
-const COLOR_T = "rgba(193, 149, 17, 1.0)";
-const COLOR_NEW_CT = "rgba(90, 184, 244, 1.0)";
-const COLOR_NEW_T = "rgba(240, 201, 65, 1.0)";
+const COLOR_CT = "rgba(1, 159, 253, 1.0)";
+const COLOR_T = "rgba(255, 160, 0, 1.0)";
+const COLOR_NEW_CT = "rgba(1, 159, 253, 1.0)";
+const COLOR_NEW_T = "rgba(255, 160, 0, 1.0)";
 const COLOR_RED = "rgba(242, 34, 34, 1.0)";
-const COLOR_MAIN_PANEL = "rgba(12, 15, 18, 0.75)";
-const COLOR_SUB_PANEL = "rgba(12, 15, 18, 0.6)";
+const COLOR_MAIN_PANEL = "rgba(0, 0, 0, 0.75)";
+const COLOR_SUB_PANEL = "rgba(0, 0, 0, 0.5)";
 const COLOR_GRAY = "rgba(191, 191, 191, 1.0)";
 const COLOR_WHITE = "rgba(250, 250, 250, 1.0)";
 const COLOR_WHITE_HALF = "rgba(250, 250, 250, 0.5)";
@@ -66,6 +66,7 @@ function updatePage(data) {
   updatePlayers(players, observed, phase, previously);
   updateTeamValues(teams.left, teams.right);
   countNades(teams.left, teams.right);
+  playersAlive(teams); //Players alive count (Players alive: 5v5)
   freezetime = round.phase == "freezetime";
   last_round = round_now;
 }
@@ -628,7 +629,7 @@ function fillObserved(obs) {
         if (obs.avatar) $("#obs_img").attr("src", "/storage/" + obs.avatar);
       } else {
         // Just Use Team Logo
-        $("#obs_img").attr("src", "/storage/" + _img);
+        $("#obs_img").attr("src", "/storage/player_silhouette.webp");
       }
     } else {
       loadAvatar(obs.steamid, function () {
@@ -665,6 +666,17 @@ function fillObserved(obs) {
     $("#obs_health_img").addClass("health_full_" + obs.team);
     $("#obs_health_text").css("color", COLOR_WHITE);
   }
+  // Health bar section
+  let health = stats.health;
+  $("#obs_hpbar1").css("background-color", team_color);
+  $("#obs_hpbar2").css("background-color", team_color);
+  $("#obs_hpbar3").css("background-color", team_color);
+  $("#obs_hpbar4").css("background-color", team_color);
+
+  $("#obs_hpbar1").css("width", (health > 0 && health < 25) ? health + "%": (health <= 0) ? "0%" : (health > 25) ? "100%" : "0%");
+  $("#obs_hpbar2").css("width", (health > 25 && health < 50) ? health + "%": (health <= 25) ? "0%" : (health > 50) ? "100%" : "0%");
+  $("#obs_hpbar3").css("width", (health > 50 && health < 75) ? health + "%": (health <= 50) ? "0%" : (health > 75) ? "100%" : "0%");
+  $("#obs_hpbar4").css("width", (health > 75 && health <= 100) ? health + "%": '0%');
 
   $("#obs_armor_text").text(stats.armor);
   $("#obs_armor_img").removeClass();
@@ -784,6 +796,26 @@ function fillPlayers(teams, observed, phase, previously) {
     }
   }
 }
+//Function for count how many players are alive
+
+function playersAlive(teams) {
+  leftCount = 0; //Set count to 0
+  for (i = 0; i < teams.left.players.length; i++) { // for loop to based on the length of left teams players
+    if (teams.left.players[i].state.health > 0) { //If a player on the left teams health > 0
+      leftCount++; // Add 1 to count
+    }
+    $("#PA_left_team_counter").text(leftCount); //add value of leftCount as text to the left team counter
+  }
+
+  //Now doing the same thing as above but for the right team
+  rightCount = 0;
+  for (i = 0; i < teams.right.players.length; i++) {
+    if (teams.right.players[i].state.health > 0) {
+      rightCount++;
+    }
+    $("#PA_right_team_counter").text(rightCount);
+  }
+  }
 
 function fillPlayer(player, nr, side, observed, phase, previously) {
   let slot = player.observer_slot;
@@ -794,7 +826,9 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
   let obs_slot = observed.observer_slot;
   let dead = stats.health == 0;
   let health_color = stats.health <= 20 ? COLOR_RED : team == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
-  let alt_health_color = stats.health <= 20 ? COLOR_RED : team == "ct" ? COLOR_CT : COLOR_T;
+  //You can change the stats.health <= 0 to 20 if you want their health bar to be red when they are 20hp or less,
+  //I don't like this so I changed the value to 0 so that it just uses team colors
+  let alt_health_color = stats.health <= 0 ? COLOR_RED : team == "ct" ? COLOR_CT : COLOR_T;
   let side_color = team == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
 
   let $player = $("#" + side).find("#player" + (nr + 1));
@@ -807,14 +841,18 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
 
   $top.find("#player_alias_text").css("color", dead ? COLOR_WHITE_HALF : COLOR_WHITE);
 
-  var adjustSlot = slot + 1;
-  if (slot >= 0 && slot <= 4) {
-    $top.find("#player_alias_text").text(adjustSlot + "| " + player.name);
-  } else if (adjustSlot == 10) {
-    $top.find("#player_alias_text").text(player.name + " |0");
-  } else {
-    $top.find("#player_alias_text").text(player.name + " |" + adjustSlot);
+  $top.find("#player_alias_text").text(player.name);
+ 
+  //Start Player Slot Section
+  if (slot == 9){
+    $player.find(".player_slot_number").text("0");
   }
+  else {
+    $player.find(".player_slot_number").text(slot + 1);
+  }
+  $player.find(".player_slot_number").css("background-color", dead ? COLOR_MAIN_PANEL : side_color);
+  $player.find(".player_slot_number").css("display", dead ? "none" : "block");
+  //End Player Slot Section
 
   $kda_money.find("#player_kills_k").css("color", side_color);
   $kda_money.find("#player_kills_text").text(stats.kills);
@@ -831,6 +869,8 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
     $bottom.find("#player_armor_image").css("opacity", 0);
     $top.find("#player_health_text").css("opacity", 0);
     $player.find(".player_dead").css("opacity", 1);
+    //Hide redbar if dead. Don't want to see the animation if dead
+    $top.find(".player_redbar").css("opacity", 0);
     if (side.substr(8) == "left") {
       $player.find("#player_alias_text").css("left", "-35px");
       $player.find("#player_current_money_text").css("left", "-55px");
@@ -847,6 +887,8 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
     $bottom.find("#player_armor_image").css("opacity", 1);
     $top.find("#player_health_text").css("opacity", 1);
     $player.find(".player_dead").css("opacity", 0);
+    //Turn redbar back on when alive again
+    $top.find(".player_redbar").css("opacity", 1);
     if (side.substr(8) == "left") {
       $player.find("#player_alias_text").css("left", "0px");
       $player.find("#player_current_money_text").css("left", "1px");
@@ -881,7 +923,7 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
   if (slot == obs_slot) {
     $player
       .find("#player_spec_bar")
-      .css("background-color", side_color)
+      .css("background-color", COLOR_WHITE)
       .css("opacity", 1);
   } else {
     $player.find("#player_spec_bar").css("opacity", 0);
@@ -892,9 +934,11 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
   // let gradient_double = "linear-gradient(to " + side.substr(8) + ", rgba(0,0,0,0) " + (100 - stats.health) + "%, " + health_color + "0% " + (50 - stats.health) + "%" + ", " + alt_health_color + " 100%)";
   // ! gradient_single works in browser and on the overlay
   let gradient_single = "linear-gradient(to " + side.substr(8) + ", rgba(0,0,0,0) " + (100 - stats.health) + "%, " + alt_health_color + " " + (100 - stats.health) + "%)";
+  let redbar = (stats.health) + "%"; // Redbar Animation
 
   $top.find(".player_health_bar").css("background", gradient_single);
   $top.find("#player_health_text").text(stats.health);
+  $top.find(".player_redbar").css("width", redbar);// Redbar Animation
 
   let armor_icon = $bottom.find("#player_armor_image");
   armor_icon.removeClass();
@@ -1271,6 +1315,11 @@ function checkGuns(weapons) {
 function updateTeamValues(left, right) {
   let left_color = left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
   let right_color = right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T;
+
+  //Players alive team colors
+  $("#PA_left_team_counter").css("color", left_color);
+  $("#PA_right_team_counter").css("color", right_color);
+
   $("#players_left #money_text").css("color", left_color);
   $("#players_left #money_value").text("$" + left.team_money);
   $("#players_right #money_text").css("color", right_color);

@@ -1,16 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); /*New default Font */
-
-
-/* Notes */
-/* I am adding a lot of comments as reminders to myself and others why I made the changes I did, even if they seem obvious */
-/* I have commented out all the font familys in each section so that everything uses only the one in the body. I left them commented so people know they can change specifics ones if they would like  */
+@import url("https://fonts.googleapis.com/css?family=Manjari&display=swap");
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto Condensed", sans-serif;
-  /* font-family: 'ESL Legend', ESL Legend Bold; */
+  font-family: "Manjari", sans-serif;
   color: #fafafa;
   background-color: rgba(0, 0, 0, 0);
 }
@@ -43,7 +37,7 @@ body {
   position: relative;
   width: 310px;
   height: 70px;
-  /* font-family: "Manjari", sans-serif; */ 
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 80px;
@@ -139,7 +133,7 @@ body {
   position: relative;
   width: 70px;
   height: 70px;
-  /* font-family: "Manjari", sans-serif; */ 
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 80px;
@@ -234,7 +228,7 @@ body {
   position: relative;
   width: 120px;
   height: 70px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 70px;
@@ -254,7 +248,7 @@ body {
   float: left;
   width: 120px;
   height: 20px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 24px;
@@ -292,7 +286,7 @@ body {
   position: relative;
   width: 355px;
   height: 40px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 44px;
@@ -460,7 +454,7 @@ body {
   float: left;
   width: 300px;
   height: 40px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 46px;
@@ -468,60 +462,7 @@ body {
   font-weight: normal;
   color: var(--dev-purple);
 }
-#players_alive {
-  display: flex;
-  flex-direction: column;
-  width: 180px;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  right: 10px;
-  top: 10px;
-  opacity: 1;
-  transition: opacity 1s;
-}
-#PA_title_container {
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  height: 20px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-#PA_counter_countainer {
-  display: flex;
-  height: 45px;
-}
-#PA_left_team_counter {
-  flex: 1 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-#PA_right_team_counter {
-  flex: 1 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-#PA_vs_counter {
-  flex: 1 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-/* End Players Alive section  */
+
 #observed {
   width: 620px;
   height: 190px;
@@ -586,7 +527,7 @@ body {
   height: 32px;
   position: relative;
   left: 5px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -603,7 +544,7 @@ body {
   height: 18px;
   position: relative;
   left: 5px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 28px;
@@ -674,7 +615,7 @@ body {
   position: relative;
   left: 34px;
   top: -20px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 36px;
@@ -704,7 +645,7 @@ body {
   position: relative;
   left: 32px;
   top: -20px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 36px;
@@ -751,7 +692,7 @@ body {
   position: absolute;
   top: 0px;
   left: 20px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 36px;
@@ -791,7 +732,7 @@ body {
   height: 30px;
   position: relative;
   top: 10px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: right;
   vertical-align: text-bottom;
   line-height: 36px;
@@ -808,7 +749,7 @@ body {
   position: relative;
   left: 24px;
   top: -20px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 36px;
@@ -887,7 +828,7 @@ body {
   position: absolute;
   left: 15px;
 
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: right;
   vertical-align: text-bottom;
   line-height: 36px;
@@ -902,7 +843,7 @@ body {
   position: absolute;
   left: 48px;
 
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 36px;
@@ -924,16 +865,16 @@ body {
   width: 585px;
   height: 595px;
   position: fixed;
-  bottom: 35px;
-  left: 25px;
+  bottom: 10px;
+  left: 10px;
 }
 
 #players_right {
   width: 585px;
   height: 595px;
   position: fixed;
-  bottom: 35px;
-  right: 25px;
+  bottom: 10px;
+  right: 10px;
 }
 
 #box_section {
@@ -1007,7 +948,7 @@ body {
   height: 50%;
   left: 10px;
   position: relative;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 48px;
@@ -1028,7 +969,7 @@ body {
   height: 50%;
   left: 10px;
   position: relative;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 34px;
@@ -1039,7 +980,7 @@ body {
 
 #players_right > #box_section > #box_top > #box_main {
   right: 10px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 76px;
@@ -1063,7 +1004,7 @@ body {
 }
 
 #box_heading_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 23px;
@@ -1074,7 +1015,7 @@ body {
 }
 
 #box_heading_subtext {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 23px;
@@ -1180,7 +1121,7 @@ body {
 #util_nade_1_count {
   height: 50px;
   width: 45px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1211,7 +1152,7 @@ body {
 #util_nade_2_count {
   height: 50px;
   width: 45px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1242,7 +1183,7 @@ body {
 #util_nade_3_count {
   height: 50px;
   width: 45px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1273,7 +1214,7 @@ body {
 #util_nade_4_count {
   height: 50px;
   width: 45px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 56px;
@@ -1307,7 +1248,7 @@ body {
 }
 
 #equip_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 40px;
@@ -1318,7 +1259,7 @@ body {
 }
 
 #equip_value {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 20px;
@@ -1329,7 +1270,7 @@ body {
 }
 
 #money_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 40px;
@@ -1340,7 +1281,7 @@ body {
 }
 
 #money_value {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 20px;
@@ -1351,7 +1292,7 @@ body {
 }
 
 #loss_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 40px;
@@ -1362,7 +1303,7 @@ body {
 }
 
 #loss_value {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 20px;
@@ -1480,28 +1421,6 @@ body {
 #players_right .player_main_holder {
   left: 180px;
 }
-/* Start Player Slot Section */
-.player_slot_number {
-  width: 23px;
-  height: 23px;
-  position: absolute;
-  background-color: var(--dev-purple);
-  border-radius: 50%;
-  border: 2px solid white;
-  z-index: 1;
-  text-align: center;
-  top: 23px;
-  line-height: 24px;
-  font-size: 19px;
-}
-
-#players_left .player_slot_number {
-  left: -15px;
-}
-#players_right .player_slot_number {
-  left: 394px;
-}
-/* End Player Slot Section */
 
 .player_side_bar {
   width: 5px;
@@ -1515,39 +1434,47 @@ body {
   left: 400px;
 }
 
+.player_image_holder {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 5px;
+  background-color: var(--sub-panel-color);
+}
+
+#players_right .player_image_holder {
+  left: 330px;
+}
+
+#player_image {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+#player_image.dead {
+  filter: grayscale(100%);
+}
+
 .player_section_top {
-  width: 395px;
+  width: 325px;
   height: 50%;
   position: absolute;
   background-color: var(--main-panel-color);
 }
 
 #players_left .player_section_top {
-  left: 5px;
+  left: 75px;
 }
 
 #players_right .player_section_top {
-  right: 5px;
-}
-.player_redbar {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: red;
-  transition: width 1s 0.5s;
-}
-#players_right .player_redbar {
-  float: right;
-}
-
-#players_left .player_redbar {
-  float: left;
+  right: 75px;
 }
 
 .player_health_bar {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
 }
 
 #players_right .player_health_bar {
@@ -1570,11 +1497,11 @@ body {
 }
 
 #players_right .player_health {
-  right: 0px;
+  left: 285px;
 }
 
 #player_health_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   vertical-align: text-bottom;
   line-height: 40px;
   font-size: 20px;
@@ -1600,7 +1527,7 @@ body {
 }
 
 #player_alias_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   vertical-align: text-bottom;
   line-height: 40px;
   font-size: 20px;
@@ -1628,7 +1555,7 @@ body {
 }
 
 #players_left .player_weapon_primary {
-  left: 293px;
+  left: 223px;
 }
 
 #players_right .player_weapon_primary {
@@ -1660,7 +1587,7 @@ body {
 }
 
 .player_section_bottom {
-  width: 395px;
+  width: 325px;
   height: 50%;
   position: absolute;
   top: 50%;
@@ -1668,7 +1595,7 @@ body {
 }
 
 #players_left .player_section_bottom {
-  left: 5px;
+  left: 75px;
 }
 
 #players_right .player_section_bottom {
@@ -1687,7 +1614,7 @@ body {
 }
 
 #players_right .player_armor {
-  left: 365px;
+  left: 295px;
 }
 
 #player_armor_image {
@@ -1707,7 +1634,7 @@ body {
 }
 
 #players_right .player_bomb_kit {
-  left: 338px;
+  left: 268px;
 }
 
 #player_bomb_kit_image {
@@ -1726,11 +1653,11 @@ body {
 }
 
 #players_right .player_current_money {
-  left: 265px;
+  left: 195px;
 }
 
 #player_current_money_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   vertical-align: text-bottom;
   line-height: 42px;
   font-size: 18px;
@@ -1760,7 +1687,7 @@ body {
 }
 
 #players_right .player_round_kills {
-  left: 230px;
+  left: 160px;
 }
 
 #player_skull {
@@ -1779,7 +1706,7 @@ body {
 }
 
 #player_round_kills_text {
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   vertical-align: text-bottom;
   line-height: 42px;
   font-size: 20px;
@@ -1806,7 +1733,7 @@ body {
 }
 
 #players_left .player_nades {
-  left: 235px;
+  left: 165px;
 }
 
 #players_right .player_nades {
@@ -1877,7 +1804,7 @@ body {
 }
 
 #players_left .player_weapon_secondary {
-  left: 333px;
+  left: 263px;
 }
 
 #players_right .player_weapon_secondary {
@@ -2028,7 +1955,7 @@ body {
   width: 32px;
   height: 35px;
   position: relative;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 42px;
@@ -2043,7 +1970,7 @@ body {
   width: 32px;
   height: 35px;
   position: relative;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 40px;
@@ -2158,7 +2085,7 @@ body {
   width: 32px;
   height: 30px;
   position: relative;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 42px;
@@ -2173,7 +2100,7 @@ body {
   width: 32px;
   height: 30px;
   position: relative;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: center;
   vertical-align: text-bottom;
   line-height: 30px;
@@ -2187,7 +2114,7 @@ body {
   height: 60px;
   position: relative;
   left: 5px;
-  /* font-family: "Manjari", sans-serif; */
+  font-family: "Manjari", sans-serif;
   text-align: left;
   vertical-align: text-bottom;
   line-height: 65px;
@@ -2729,17 +2656,17 @@ body {
 }
 
 :root {
-  --main-panel-color: rgba(0, 0, 0, 0.75);
-  --sub-panel-color: rgba(0, 0, 0, 0.5);
+  --main-panel-color: rgba(12, 15, 18, 0.75);
+  --sub-panel-color: rgba(12, 15, 18, 0.6);
   --white-dull: rgba(250, 250, 250, 0.25);
   --white-full: rgba(250, 250, 250, 1);
   --white-half: rgba(250, 250, 250, 0.5);
   --color-moneys: #a7d32e;
   --dev-purple: rgba(200, 0, 255, 1);
-  --color-t: rgba(255, 160, 0, 1.0);
-  --color-ct: rgba(1, 159, 253, 1.0);
-  --color-new-t: rgba(255, 160, 0, 1.0);
-  --color-new-ct: #rgba(1, 159, 253, 1.0);
+  --color-t: #c19511;
+  --color-ct: #5788a8;
+  --color-new-t: #f0c941;
+  --color-new-ct: #5ab8f4;
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
 }
