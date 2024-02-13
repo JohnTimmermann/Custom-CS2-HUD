@@ -108,6 +108,8 @@ It might be useful for bigger streaming workspaces, like for setups with differe
 ## Credits
 
 [osztenkurden](https://github.com/osztenkurden) - Original Repo Creator
+[dionpirotta](https://github.com/dionpirotta) - Improved off of original a lot
+[kyrunic1](https://github.com/kyrunic1) - Kept old version updated
 
 ## License
 
