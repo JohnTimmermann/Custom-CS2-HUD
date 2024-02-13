@@ -22,8 +22,7 @@ Best contact is twitter: [@JTMythic](https://twitter.com/JTMythic).
 
 # Examples
 
-![Ex1](https://i.imgur.com/u70Z8XJ.png)
-![Ex2](https://i.imgur.com/Ok5Jm1V.png)
+![Ex1](https://imgur.com/a/EBSa9MU)
 
 ## How does it work?
 
@@ -34,8 +33,8 @@ Basically, CS2 is streaming data to local app-server, that transforms data and t
 - Node.js needs to be installed
 - public/files/cfg/gamestate_integration_observerspectator.cfg needs to be placed in cfg folder in CS:GO location
 - public/files/cfg/observer.cfg needs to be placed in cfg folder in CS:GO location
-- CS:GO needs to run on Fullscreen Windowed (I know people may dislike it, but since it's only for observation, soo...)
-- After running CS:GO and connecting to match (or replaying a demo, you can use this in it too), type to console `exec observer.cfg`, it makes everything default disappear besides map and killfeed (can use `exec observer_off.cfg` to turn back to normal)
+- CS2 needs to run on Fullscreen Windowed (I know people may dislike it, but since it's only for observation, soo...)
+- After running CS2 and connecting to match (or replaying a demo, you can use this in it too), type to console `exec observer.cfg`, it makes everything default disappear besides map and killfeed (can use `exec observer_off.cfg` to turn back to normal)
 - Ensure everything in the `config.json` file is filled out
 
 ## Configuration
