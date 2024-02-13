@@ -11,6 +11,7 @@ I am going to be adding a few things to the default hud.
 - Observed player healthbar - COMPLETED
 - Number slots for each player - COMPLETED
 - Update Top Panel
+- Bomb timer and Defuse timer updates
 - Map picks (This takes a lot more effort as I have to add things to the admin panel)
 - Make admin panel look a bit better.
 
