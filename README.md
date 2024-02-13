@@ -6,10 +6,10 @@ I am taking the work they have done and adding on top of it. Mainly plan on tryi
 # Features I want to add:
 I am going to be adding a few things to the default hud.
 
-    Players Alive counter (i.e. Players Alive: 5v5)
-    Delayed red health bar when a player takes damage
-    Observed player healthbar
-    Number slots for each player
+    Players Alive counter (i.e. Players Alive: 5v5) - COMPLETED
+    Delayed red health bar when a player takes damage - COMPLETED
+    Observed player healthbar - COMPLETED
+    Number slots for each player - COMPLETED
     Map picks (This takes a lot more effort as I have to add things to the admin panel)
     Make admin panel look a bit better.
 
