@@ -1,7 +1,7 @@
 # CS2 Observer Custom HUD
 
 Based off a fork from [osztenkurden](https://github.com/osztenkurden), [dionpirotta](https://github.com/dionpirotta), [kyrunic1](https://github.com/kyrunic1/)
-I am taking the work he has done and adding on top of it. Mainly plan on trying to make the code more readable for new people and make the default hud look a little better so more people can use it.
+I am taking the work they have done and adding on top of it. Mainly plan on trying to make the code more readable for new people and make the default hud look a little better so more people can use it.
 
 # Features I want to add:
 I am going to be adding a few things to the default hud.
