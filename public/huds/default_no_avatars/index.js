@@ -170,6 +170,8 @@ function updateTopPanel() {
 }
 
 function updateLeague() {
+  $("#radar_container #radar_main").text(_left_primary);
+  $("#radar_container #radar_second").text(_left_secondary);
   $("#players_left #box_image").attr("src", _left_image);
   $("#players_left #main_primary").text(_left_primary);
   $("#players_left #main_secondary").text(_left_secondary);

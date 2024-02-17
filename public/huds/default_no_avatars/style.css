@@ -524,6 +524,48 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 /* End Players Alive section  */
+
+/* Start Radar Section */
+#radar_container {
+  width: 382px;
+  height: 382px;
+  position: absolute;
+  left: 42px;
+  top: 30px;
+}
+#radar_title {
+  position: absolute;
+  width: 345px;
+  height: 30px;
+  background-color: var(--main-panel-color);
+  left: 18px;
+  top: -10px;
+}
+#radar_main {
+float: left;
+position: relative;
+font-size: 20px;
+left: 10px;
+color: yellow;
+}
+#radar_second {
+float: right;
+position: relative;
+font-size: 20px;
+right: 10px;
+}
+#radar {
+  width: 350px;
+  height: 350px;
+  /* Uncomment if you want a background to the radar */
+  /* background-color: var(--sub-panel-color); */
+  position: absolute;
+  top: 28px;
+  left: 15px;
+}
+
+/* End Radar Section */
+
 #observed {
   width: 620px;
   height: 190px;
