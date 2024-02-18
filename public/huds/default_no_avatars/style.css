@@ -492,7 +492,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 1);
 }
 #PA_counter_countainer {
   display: flex;
