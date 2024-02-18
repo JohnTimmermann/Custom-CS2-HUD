@@ -26,7 +26,7 @@ Best contact is discord: not_jt
 
 # Examples
 
-![Ex1](https://i.imgur.com/wk31ES9.png)
+![Ex1](https://i.imgur.com/lPfe5ss.png)
 ## How does it work?
 
 Basically, CS2 is streaming data to local app-server, that transforms data and then load it to local webpage.
