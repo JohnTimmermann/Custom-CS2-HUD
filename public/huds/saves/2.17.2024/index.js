@@ -120,17 +120,19 @@ function updateTopPanel() {
   //#region Team Name
   $("#left_team #main")
     .text(teams.left.name.toUpperCase())
-    .css("background-color", teams.left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
+    .css("color", teams.left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
   $("#right_team #main")
     .text(teams.right.name.toUpperCase())
-    .css("background-color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
+    .css("color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
   //#endregion
 
-  //#region Best of
-  $("#left_team #best_of")
-    .css("background-color", teams.left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
-  $("#right_team #best_of")
-    .css("background-color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
+  //#region Team Score
+  $("#left_team #score")
+    .text(teams.left.score)
+    .css("color", teams.left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
+  $("#right_team #score")
+    .text(teams.right.score)
+    .css("color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
   //#endregion
 
   //#region Poles
@@ -165,8 +167,6 @@ function updateTopPanel() {
     $("#right_team #team_flag").css("background-image", "");
   }
   //#endregion
-
-  
 }
 
 function updateLeague() {

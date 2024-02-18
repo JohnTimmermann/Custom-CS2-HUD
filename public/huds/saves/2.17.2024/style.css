@@ -16,43 +16,43 @@ body {
 }
 
 #top_panel {
-  width: 825px;
-  height: 60px;
+  width: 1100px;
+  height: 70px;
   position: fixed;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--sub-panel-color);
+  background-color: var(--main-panel-color);
 }
 
 #left_team {
   position: relative;
   float: left;
-  width: 350px;
-  height: 60px;
+  width: 490px;
+  height: 70px;
 }
 
 #right_team {
   position: relative;
   float: right;
-  width: 350px;
-  height: 60px;
+  width: 490px;
+  height: 70px;
 }
 
 #main {
   position: relative;
-  width: 190px;
-  height: 60px;
+  width: 310px;
+  height: 70px;
   /* font-family: "Manjari", sans-serif; */ 
   text-align: center;
   vertical-align: text-bottom;
-  line-height: 65px;
-  font-size: 1.75rem;
-  font-weight: 450;
+  line-height: 80px;
+  font-size: 30px;
+  font-weight: bold;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  color: white
+  color: var(--dev-purple);
 }
 
 #left_team #main {
@@ -65,10 +65,8 @@ body {
 
 #logo {
   position: relative;
-  width: 60px;
-  height: 60px;
-  background-color: var(--main-panel-color);
-  background-image: url("/files/img/elements/Logo.jpg"); 
+  width: 80px;
+  height: 70px;
 }
 
 #left_team #logo {
@@ -83,17 +81,17 @@ body {
   position: relative;
   width: 60px;
   height: 60px;
-  /* top: 5px; */
+  top: 5px;
 }
 
 #left_team #team_logo {
   float: left;
-  /* left: 10px; */
+  left: 10px;
 }
 
 #right_team #team_logo {
   float: right;
-  /* right: 10px; */
+  right: 10px;
 }
 
 #team_flag {
@@ -125,9 +123,8 @@ body {
 
 #best_of {
   position: relative;
-  width: 35px;
-  height: 60px;
-  background-color: black;
+  width: 30px;
+  height: 70px;
 }
 
 #left_team #best_of {
@@ -140,31 +137,31 @@ body {
 
 #score {
   position: relative;
-  width: 65px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   /* font-family: "Manjari", sans-serif; */ 
   text-align: center;
   vertical-align: text-bottom;
-  line-height: 65px;
+  line-height: 80px;
   font-size: 30px;
   font-weight: bold;
-  background-color: var(--main-panel-color);
-  background-image: url("/files/img/elements/Score.jpg"); 
-  color: white;
 }
 
 #left_team #score {
   float: left;
+  color: var(--dev-purple);
 }
 
 #right_team #score {
   float: right;
+  color: var(--dev-purple);
 }
 
 .bar {
   position: relative;
   width: 5px;
-  height: 70px;
+  height: 50px;
+  top: 10px;
   background-color: var(--dev-purple);
 }
 
@@ -173,39 +170,39 @@ body {
 .block3,
 .block4,
 .block5 {
-  width: 22px;
-  height: 8px;
-  background-color: #0000005c;
+  width: 10px;
+  height: 10px;
+  background-color: var(--white-dull);
   opacity: 0;
 }
 
 .block1 {
   position: absolute;
-  left: 7px;
+  left: 10px;
   top: 15px;
 }
 
 .block2 {
   position: absolute;
-  left: 7px;
+  left: 10px;
   top: 30px;
 }
 
 .block3 {
   position: absolute;
-  left: 7px;
+  left: 10px;
   top: 45px;
 }
 
 .block4 {
   position: absolute;
-  left: 7px;
+  left: 10px;
   top: 22.5px;
 }
 
 .block5 {
   position: absolute;
-  left: 7px;
+  left: 10px;
   top: 37.5px;
 }
 
@@ -220,10 +217,8 @@ body {
 #center_section {
   position: relative;
   float: left;
-  width: 125px;
-  height: 60px;
-  background-color: var(--main-panel-color);
-  background-image: url("/files/img/elements/CenterSection.jpg");  
+  width: 120;
+  height: 70px;
 }
 
 #round_timer {
@@ -232,29 +227,30 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 120px;
-  height: 60px;
+  height: 50px;
 }
 
 #round_timer_text {
   position: relative;
   width: 120px;
-  height: 60px;
+  height: 70px;
   /* font-family: "Manjari", sans-serif; */
   text-align: center;
   vertical-align: text-bottom;
-  line-height: 45px;
-  font-size: 28px;
+  line-height: 70px;
+  font-size: 30px;
   font-weight: bold;
   color: var(--dev-purple);
+
   animation-duration: 0.25s;
   animation-iteration-count: 1;
-  top: 20px;
 }
 
 #round_number {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  top: 50px;
   float: left;
   width: 120px;
   height: 20px;
@@ -497,7 +493,6 @@ body {
 #PA_counter_countainer {
   display: flex;
   height: 45px;
-  background-image: url("/files/img/elements/PlayersAlive.jpg"); 
 }
 #PA_left_team_counter {
   flex: 1 1;
@@ -543,7 +538,6 @@ body {
   width: 345px;
   height: 30px;
   background-color: var(--main-panel-color);
-  background-image: url("/files/img/elements/RadarTitle.jpg"); 
   left: 18px;
   top: -10px;
 }
@@ -1136,7 +1130,6 @@ right: 10px;
   height: 70px;
   margin-top: 5px;
   background-color: var(--main-panel-color);
-  background-image: url("/files/img/elements/BoxSection.jpg"); 
   display: none;
 }
 
@@ -1373,7 +1366,6 @@ right: 10px;
   height: 70px;
   margin-top: 5px;
   background-color: var(--main-panel-color);
-  background-image: url("/files/img/elements/BoxSection.jpg"); 
   display: none;
 }
 
