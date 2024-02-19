@@ -755,7 +755,7 @@ function fillObserved(obs) {
   skull_color = obs.team == "CT" ? "CT" : "T";
   $("#obs_round_kills #obs_skull").removeClass();
   if (stats.round_kills > 0) {
-    $("#obs_round_kills #obs_skull").addClass("obs_skull_" + skull_color);
+    $("#obs_round_kills #obs_skull").addClass("obs_kills_" + obs.team);
     $("#obs_round_kills #obs_round_kills_text").text(stats.round_kills);
   } else {
     $("#obs_round_kills #obs_round_kills_text").text("");
@@ -987,7 +987,7 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
   $bottom.find("#player_skull").removeClass();
   $bottom.find("#player_round_kills_text").text("");
   if (stats.round_kills > 0) {
-    $bottom.find("#player_skull").addClass("player_skull_default");
+    $bottom.find("#player_skull").addClass("player_kills_" + team);
     $bottom.find("#player_round_kills_text").text(stats.round_kills);
   }
 

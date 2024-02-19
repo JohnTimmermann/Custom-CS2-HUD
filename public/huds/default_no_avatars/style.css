@@ -2430,8 +2430,8 @@ right: 10px;
   background-position: center;
 }
 
-.obs_skull_T {
-  background-image: url("/files/img/elements/icon_skull_T.png");
+.obs_kills_T {
+  background-image: url("/files/img/elements/icon_kills_t.png");
   max-height: 18px;
   max-width: 18px;
   background-repeat: no-repeat;
@@ -2439,8 +2439,8 @@ right: 10px;
   background-position: center;
 }
 
-.obs_skull_CT {
-  background-image: url("/files/img/elements/icon_skull_CT.png");
+.obs_kills_CT {
+  background-image: url("/files/img/elements/icon_kills_ct.png");
   max-height: 18px;
   max-width: 18px;
   background-repeat: no-repeat;
@@ -2771,6 +2771,22 @@ right: 10px;
 
 .player_skull_default {
   background-image: url("/files/img/elements/icon_skull_default.png");
+  max-height: 18px;
+  max-width: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.player_kills_ct {
+  background-image: url("/files/img/elements/icon_kills_ct.png");
+  max-height: 18px;
+  max-width: 18px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.player_kills_t {
+  background-image: url("/files/img/elements/icon_kills_t.png");
   max-height: 18px;
   max-width: 18px;
   background-repeat: no-repeat;
