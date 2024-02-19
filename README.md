@@ -15,7 +15,7 @@ I am going to be adding a few things to the default hud.
 - Map picks (This takes a lot more effort as I have to add things to the admin panel)
 - Make admin panel look a bit better.
 - Add Custom Radar
-- Players section shorten and skull appears when dead
+- Players section shorten and skull appears when dead - COMPLETED
 
 Hopefully it ends up looking very nice and lets a lot of people use it in their streams!
     
