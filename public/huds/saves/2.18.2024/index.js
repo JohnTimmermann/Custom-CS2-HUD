@@ -874,9 +874,6 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
     $bottom.find("#player_armor_image").css("opacity", 0);
     $top.find("#player_health_text").css("opacity", 0);
     $player.find(".player_dead").css("opacity", 1);
-    $player.find(".player_section_top").css("width", "200px")
-    $player.find(".player_section_bottom").css("width", "200px")
-    $player.find(".player_section_bottom").css("background-color", COLOR_MAIN_PANEL)
     //Hide redbar if dead. Don't want to see the animation if dead
     $top.find(".player_redbar").css("opacity", 0);
     if (side.substr(8) == "left") {
@@ -895,9 +892,6 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
     $bottom.find("#player_armor_image").css("opacity", 1);
     $top.find("#player_health_text").css("opacity", 1);
     $player.find(".player_dead").css("opacity", 0);
-    $player.find(".player_section_top").css("width", "300px")
-    $player.find(".player_section_bottom").css("width", "300px")
-    $player.find(".player_section_bottom").css("background-color", COLOR_SUB_PANEL)
     //Turn redbar back on when alive again
     $top.find(".player_redbar").css("opacity", 1);
     if (side.substr(8) == "left") {
@@ -976,7 +970,7 @@ function fillPlayer(player, nr, side, observed, phase, previously) {
     $bottom.find("#player_bomb_kit_image").addClass("player_kit");
   }
 
-  $bottom.find("#player_current_money_text").css("color", dead ? COLOR_WHITE_HALF : "#48ff00");
+  $bottom.find("#player_current_money_text").css("color", dead ? COLOR_WHITE_HALF : "#a7d32e");
   $bottom.find("#player_current_money_text").text("$" + stats.money);
   if (!start_money[steamid]) {
     start_money[steamid] = stats.money;
