@@ -816,7 +816,14 @@ function playersAlive(teams) {
       rightCount++;
     }
     $("#PA_right_team_counter").text(rightCount);
+    if (rightCount == 1 || leftCount == 1) {
+      $("#PA_title_container").text("Clutch Time");
+    }
+    else {
+      $("#PA_title_container").text("Players Alive");
+    }
   }
+
   }
 
 function fillPlayer(player, nr, side, observed, phase, previously) {
