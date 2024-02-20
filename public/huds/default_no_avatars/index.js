@@ -816,6 +816,8 @@ function playersAlive(teams) {
       rightCount++;
     }
     $("#PA_right_team_counter").text(rightCount);
+
+    //Changing PA_Title to clutch time if either side only has one player alive
     if (rightCount == 1 || leftCount == 1) {
       $("#PA_title_container").text("Clutch Time");
     }
