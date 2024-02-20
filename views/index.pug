@@ -12,49 +12,31 @@ html
 	script(src="/js/players.js")
 	script(src="/js/huds.js")
 	script(src="/js/materialize.min.js")
-	script(src="/js/tabs.js")
 	link(rel='stylesheet', href='/css/materialize.min.css')
-	link(rel='stylesheet', href='/css/hide.css')
 	link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
 	meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
-	body.has-fixed-sidenav
-		header
-			.navbar-fixed
-			ul.sidenav.sidenav-fixed.teal.darken-4
-				li
-					a.logo-container.white-text(href='#teams_panel' style='pointer-events: none; font-size: 24px') Admin Panel
-						i.material-icons.left rocket_launch
-				li.no-padding
-					ul
-						li.bold.waves-effect(style='width: 300px')
-							//- a.collapsible-header(tabindex='0') Pages
-							//- 	i.material-icons.chevronstyle(style='float: right') chevron_left
-							div
-								ul
-									li
-										a.waves-effect.white-text(href='#match') Create Match
-											i.material-icons add_circle
-									li
-										a.waves-effect.white-text(href='#huds') HUDS
-											i.material-icons view_list
-									li
-										a.waves-effect.white-text(href='#team_panel') Teams
-											i.material-icons groups
-									li
-										a.waves-effect.white-text(href='#player_panel') Players
-											i.material-icons person
-
+	body
 		.container
 				.row
-					#team_panel.col.s12.hide
+					.col.s12
+						ul.tabs
+							li.tab.col.s3
+								a.active(href='#team_panel') Teams
+							li.tab.col.s3
+								a(href='#player_panel') Players
+							li.tab.col.s3
+								a(href='#match') Create match
+							li.tab.col.s3
+								a(href='#huds') HUDs
+					#team_panel.col.s12
 						include teams.pug
-					#player_panel.col.s12.hide
+					#player_panel.col.s12
 						include players.pug
 					#match.col.s12
 						include panel.pug
-					#huds.col.s12.hide
+					#huds.col.s12
 						include huds.pug
 	script.
 		$('select').formSelect();
