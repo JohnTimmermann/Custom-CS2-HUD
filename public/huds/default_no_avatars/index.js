@@ -133,6 +133,13 @@ function updateTopPanel() {
     .css("background-color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
   //#endregion
 
+  //#region Team Score
+  $("#left_team #score")
+    .text(teams.left.score)
+  $("#right_team #score")
+    .text(teams.right.score)
+  //#endregion
+
   //#region Poles
   $("#left_team .bar").css("background-color", teams.left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
   $("#right_team .bar").css("background-color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
