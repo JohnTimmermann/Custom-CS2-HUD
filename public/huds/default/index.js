@@ -181,7 +181,7 @@ function updateLeague() {
 
 function updateRoundNow(round, map) {
   round_now = map.round + (round.phase == "over" || round.phase == "intermission" ? 0 : 1);
-  $("#round_number").text("Round " + round_now + " / 30");
+  $("#round_number").text("Round " + round_now + " / 24");
   if ((round.phase == "freezetime" && !freezetime) || round_now != last_round) {
     start_money = {};
   }
