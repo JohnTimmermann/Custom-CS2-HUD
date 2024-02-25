@@ -181,6 +181,10 @@ io.on("connection", socket => {
   socket.on("refresh", data => {
     io.emit("refresh", data);
   });
+  //Receiving and emitting updateIgnoredSteamID for coaches
+  socket.on("updateIgnoredSteamID", data => {
+    io.emit("updateIgnoredSteamID", data);
+  });
 });
 
 express.listen(config.ServerPort, address || "localhost", () => {

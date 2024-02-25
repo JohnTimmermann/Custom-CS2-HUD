@@ -40,9 +40,25 @@
 						option(value=null) NONE
 						option(value='auto', selected) Try to match team automatically
 					label Set team 2
+		//- Hiding players by steamID64
+		.row
+			.col.s12
+				blockquote Enter in a SteamID64 one at a time. 
+				| This is a buggy feature, so if you ever refresh the page, resubmit the SteamID64s (Keep the SteamIDs ready to paste in). There is also nothing we can do to change the observer slots because that is what they actually are when spectating.
+				#ignoredSteamIDs
+				.input-field.col.s12.m12
+					input#ignoredSteamIDInput.validate(placeholder='Steam ID 64 to hide', type='text')
+					label SteamID64 to hide
+
+			
+
+
 		.input-field.col.s12
 			.row
 				a.waves-effect.waves-light.btn#set Set
 				a.waves-effect.waves-light.btn#swap Swap
 			.row
 				a.waves-effect.waves-light.btn#ref Force refresh HUD
+
+
+

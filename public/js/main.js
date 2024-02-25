@@ -1,6 +1,7 @@
 var io = io("http://" + ip + ":" + port + "/");
 var avatars = {};
 
+
 function load(cb) {
   loadTeams(cb);
 }
@@ -41,8 +42,14 @@ function loadAvatar(steamid, callback) {
 }
 
 $(document).ready(function () {
+  if (io.connected) {
+    console.log("main.js Connected to io");
+  }
+  let ignoredSteamID = []; //Initialize ignoredSteamID array to hide players
   var slotted = [];
   var meth = {
+  
+
     getTeamOne: function () {
       if (!this.info.teams) return false;
       return this.loadTeam(this.info.teams.team_1.team);
@@ -62,12 +69,18 @@ $(document).ready(function () {
     },
     getPlayers: function () {
       if (!this.info.allplayers) return false;
-
       let res = [];
+
       for (var steamid in this.info.allplayers) {
         let player = this.info.allplayers[steamid];
-        //if (player.observer_slot == 0) player.observer_slot = 10;
+       
         player.steamid = steamid;
+        player.steamid = steamid;
+        
+        if (ignoredSteamID.includes(steamid)) { //If the steamID is in ignoredSteamID, we continue to the next player in the loop
+          continue;
+        }
+
         res.push(player);
       }
       res.sort(function (a, b) {
@@ -246,6 +259,7 @@ $(document).ready(function () {
   function listener(players, teams) {
     io.on("match", function (data) {
       match = data;
+      console.log("Mainjs Test")
     });
     io.on("update", function (json) {
       json.teams = match;
@@ -260,6 +274,18 @@ $(document).ready(function () {
       location.reload();
     });
     io.emit("ready", true);
+
+    //Listening for updateIgnoredSteamID - Also needed in index.js in root folder
+
+    io.on("updateIgnoredSteamID", function(data) {
+      const newIgnoreSID = data.ignoreSID;
+      console.log("SteamdID to ignore: " + newIgnoreSID);
+
+      if(!ignoredSteamID.includes(newIgnoreSID)) {
+        ignoredSteamID.push(newIgnoreSID);
+      }
+
+    });
   }
   load(listener);
 });
