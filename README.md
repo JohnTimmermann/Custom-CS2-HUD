@@ -10,12 +10,13 @@ I am going to be adding a few things to the default hud.
 - Delayed red health bar when a player takes damage - COMPLETED
 - Observed player healthbar - COMPLETED
 - Number slots for each player - COMPLETED
+- Players section shorten and skull appears when dead - COMPLETED
+- Option to Hide Players/Coaches - COMPLETED
 - Update Top Panel - Started
 - Bomb timer and Defuse timer updates
-- Map picks (This takes a lot more effort as I have to add things to the admin panel)
+- Map picks
 - Make admin panel look a bit better.
-- Add Custom Radar
-- Players section shorten and skull appears when dead - COMPLETED
+- Add Custom Radar (Very far in future)
 
 Hopefully it ends up looking very nice and lets a lot of people use it in their streams!
     
