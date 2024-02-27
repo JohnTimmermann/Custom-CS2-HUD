@@ -90,25 +90,24 @@ After starting the code go to address showing up in terminal/command prompt. You
 #### Teams tab
 
 You can here define teams, their name, short names (actually short names are not use anywhere for now), their country flag and logo. Files for teams' logos are being held in `public/storage/` and their filename should start from `logo-`.
-![Ex1](https://i.imgur.com/XKkRXFR.png)
+![Ex1](https://i.imgur.com/DHQyvAz.png)
 
 #### Players tab
 
 In Players tab you can define player's real name, displayed name, country flag (can also be set to "The same as team"), their team and, to identify players, SteamID64. Files for players' avatars are being held in `public/storage/` and their filename should start from `avatar-`.
-![Ex2](https://i.imgur.com/XHJOLJ0.png)
+![Ex2](https://i.imgur.com/Y2LO8B4.png)
 
 #### Create match tab
 
 Here you can set type of match - is this a map of NONE, BO1, BO3 or BO5, score for teams and which team it should load to HUD. In case players are on the wrong side (left/right) there is `SWAP` button to quickly tell the HUD to swap teams' name, logo and flag.
 Additionaly, if during the match you decide that there is a type in team's or player's information, you can change it (for example on mobile phone, if you allow Node through firewall and you are on the same local network) and then in this tab click the `Force Refresh HUD`, to make sure all the changes are applied.
-![Ex3](https://i.imgur.com/QgIbw6U.png)
-
+![Ex3](https://i.imgur.com/0AjPqTz.png)
 ### HUDS
 
 This tab shows local HUDs. They are not validated whether or not they actually work, but if any of the files is missing, it will notify you in Warnings column.
 You can enable/disable each HUD to make it accessible or not. There is also HUD URL information - if you click it, it will redirect you to local webpage, that's serving as a HUD. It is useful if streamer wants to stream HUD separately - for example it can be added in OBS as Browser Source, then you just need to set it to HUD's URL.
 It might be useful for bigger streaming workspaces, like for setups with different PC dedicated to replays - one server app will manage every HUD on local network, because all HUDs are available all the time, if they are not disabled.
-![Ex4](https://i.imgur.com/dKFmxbT.png)
+![Ex4](https://i.imgur.com/qkWCfUj.png)
 
 ## Credits
 
