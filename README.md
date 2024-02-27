@@ -100,7 +100,7 @@ In Players tab you can define player's real name, displayed name, country flag (
 #### Create match tab
 
 Here you can set type of match - is this a map of NONE, BO1, BO3 or BO5, score for teams and which team it should load to HUD. In case players are on the wrong side (left/right) there is `SWAP` button to quickly tell the HUD to swap teams' name, logo and flag.
-Additionaly, if during the match you decide that there is a type in team's or player's information, you can change it (for example on mobile phone, if you allow Node through firewall and you are on the same local network) and then in this tab click the `Force Refresh HUD`, to make sure all the changes are applied.
+Additionaly, if during the match you decide that there is a type in team's or player's information, you can change it (for example on mobile phone, if you allow Node through firewall and you are on the same local network) and then in this tab click the `Force Refresh HUD`, to make sure all the changes are applied. You can also enter players SteamdID64s that you want to hide/ignore and clicking `Hide Player`.
 ![Ex3](https://i.imgur.com/0AjPqTz.png)
 ### HUDS
 
