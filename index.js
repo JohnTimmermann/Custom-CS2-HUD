@@ -181,9 +181,9 @@ io.on("connection", socket => {
   socket.on("refresh", data => {
     io.emit("refresh", data);
   });
-  //Receiving and emitting updateIgnoredSteamID for coaches
-  socket.on("updateIgnoredSteamID", data => {
-    io.emit("updateIgnoredSteamID", data);
+  //Receiving and emitting hidePlayers for coaches
+  socket.on("hidePlayers", data => {
+    io.emit("hidePlayers", data);
   });
 });
 

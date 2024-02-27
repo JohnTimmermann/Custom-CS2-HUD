@@ -31,14 +31,9 @@ function loadMatch(data) {
 }
 $(document).ready(() => {
 
-  const ignoredSteamIDInput = document.getElementById("ignoredSteamIDInput"); //getElementByID for ignoredSteamIDInput
-  
-  ignoredSteamIDInput.addEventListener("change", function() { //Event listener, if input is chaged, run this function
-    
-    const ignoreSID = this.value; //Set ignoreSID to the value given
-
-    io.emit("updateIgnoredSteamID", { ignoreSID: ignoreSID}); // Emit the data to the server
-    console.log("From panel.js: " + ignoreSID); //Logging for testing purposes
+  $("#iSIDinput").change(() => {
+    let iSID = $("#iSIDinput").val(); // iSID(ignoreSteamID)
+    io.emit("hidePlayers", { iSID: iSID}); // Emit the data to the server
   });
 
   $("#set").click(() => {

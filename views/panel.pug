@@ -43,12 +43,12 @@
 		//- Hiding players by steamID64
 		.row
 			.col.s12
-				blockquote Enter in a SteamID64 one at a time. 
-				| This is a buggy feature, so if you ever refresh the page, resubmit the SteamID64s (Keep the SteamIDs ready to paste in). There is also nothing we can do to change the observer slots because that is what they actually are when spectating.
 				#ignoredSteamIDs
 				.input-field.col.s12.m12
-					input#ignoredSteamIDInput.validate(placeholder='Steam ID 64 to hide', type='text')
-					label SteamID64 to hide
+					input#iSIDinput.validate(placeholder='Paste in SteamID64 and hit enter', type='text')
+					label SteamID64 to Hide
+					blockquote Enter in a SteamID64 one at a time and keep the SteamIDs ready to paste in. If you ever refresh the page, resubmit the SteamID64s. There is also nothing we can do to change the observer slots because that is what they actually are when spectating.
+
 
 			
 

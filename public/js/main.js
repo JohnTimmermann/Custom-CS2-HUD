@@ -45,7 +45,7 @@ $(document).ready(function () {
   if (io.connected) {
     console.log("main.js Connected to io");
   }
-  let ignoredSteamID = []; //Initialize ignoredSteamID array to hide players
+  let ignoredSteamIDs = []; //Initialize ignoredSteamIDs array to hide players
   var slotted = [];
   var meth = {
   
@@ -77,7 +77,7 @@ $(document).ready(function () {
         player.steamid = steamid;
         player.steamid = steamid;
         
-        if (ignoredSteamID.includes(steamid)) { //If the steamID is in ignoredSteamID, we continue to the next player in the loop
+        if (ignoredSteamIDs.includes(steamid)) { //If the steamID is in ignoredSteamIDs, we continue to the next player in the loop
           continue;
         }
 
@@ -275,14 +275,11 @@ $(document).ready(function () {
     });
     io.emit("ready", true);
 
-    //Listening for updateIgnoredSteamID - Also needed in index.js in root folder
-
-    io.on("updateIgnoredSteamID", function(data) {
-      const newIgnoreSID = data.ignoreSID;
-      console.log("SteamdID to ignore: " + newIgnoreSID);
-
-      if(!ignoredSteamID.includes(newIgnoreSID)) {
-        ignoredSteamID.push(newIgnoreSID);
+    //Listening for hidPlayers - Also needed in index.js in root folder
+    io.on("hidePlayers", function(data) { 
+      const iSID = data.iSID; //Setting iSID to the value of the parameter given data, and accessing iSID with dot operator
+      if(!ignoredSteamIDs.includes(iSID)) { //If iSID is not already in ignoredSteamIDs, 
+        ignoredSteamIDs.push(iSID); //push iSID to ignoredSteamIDs
       }
 
     });
