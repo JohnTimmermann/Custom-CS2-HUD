@@ -259,7 +259,6 @@ $(document).ready(function () {
   function listener(players, teams) {
     io.on("match", function (data) {
       match = data;
-      console.log("Mainjs Test")
     });
     io.on("update", function (json) {
       json.teams = match;

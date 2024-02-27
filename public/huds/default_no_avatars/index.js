@@ -47,8 +47,8 @@ function updatePage(data) {
 
     teams.left.name = team_one.team_name || teams.left.name;
     teams.right.name = team_two.team_name || teams.right.name;
-    teams.left.short_name = team_one.short_name;
-    teams.right.short_name = team_two.short_name;
+    teams.left.short_name = team_one.short_name || teams.left.name;
+    teams.right.short_name = team_two.short_name || teams.right.name;
     teams.left.logo = team_one.logo || null;
     teams.right.logo = team_two.logo || null;
     teams.left.flag = team_one.country_code || null;
@@ -119,12 +119,14 @@ function setupBestOf(matchup, match) {
 function updateTopPanel() {
   //#region Team Name
   $("#left_team #main")
-    .text(teams.left.name.toUpperCase())
+    .text(teams.left.name.length > 12 ? teams.left.short_name.toUpperCase() : teams.left.name.toUpperCase()) // If the teams names are more than 12 characters, use the short names.
     .css("background-color", teams.left.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
   $("#right_team #main")
-    .text(teams.right.name.toUpperCase())
+    .text(teams.right.name.length > 12 ? teams.right.short_name.toUpperCase() : teams.right.name.toUpperCase()) // If the teams names are more than 12 characters, use the short names.
     .css("background-color", teams.right.side == "ct" ? COLOR_NEW_CT : COLOR_NEW_T);
+
   //#endregion
+
 
   //#region Best of
   $("#left_team #best_of")

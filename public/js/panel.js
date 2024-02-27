@@ -30,6 +30,9 @@ function loadMatch(data) {
   });
 }
 $(document).ready(() => {
+  if (io.connected) {
+    console.log("Panel.js Connected to io");
+  }
 
   $("#iSIDButton").click(() => {
     let iSID = $("#iSIDinput").val().trim(); // iSID(ignoreSteamID)
