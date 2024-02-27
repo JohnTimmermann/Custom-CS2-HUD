@@ -27,7 +27,7 @@ Best contact is discord: not_jt
 
 If you want to support me continuing to work on this:
 
-[![Paypal donate](https://www.paypalobjects.com/en_US/PL/i/btn/btn_donateCC_LG.gif)](paypal.me/johntimmermann1)
+paypal.me/johntimmermann1
 
 # Examples
 
