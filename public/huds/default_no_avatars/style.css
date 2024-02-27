@@ -577,7 +577,7 @@ right: 10px;
   width: 620px;
   height: 190px;
   position: fixed;
-  bottom: 70px;
+  bottom: 85px;
   left: 50%;
   transform: translateX(-50%);
 }
