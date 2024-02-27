@@ -31,9 +31,15 @@ function loadMatch(data) {
 }
 $(document).ready(() => {
 
-  $("#iSIDinput").change(() => {
-    let iSID = $("#iSIDinput").val(); // iSID(ignoreSteamID)
+  $("#iSIDButton").click(() => {
+    let iSID = $("#iSIDinput").val().trim(); // iSID(ignoreSteamID)
     io.emit("hidePlayers", { iSID: iSID}); // Emit the data to the server
+    let chip = $(`<div class="chip"><span class="chip-text">Hiding: ${iSID}</span></div>`);
+    $(".chip-container").append(chip);
+    document.getElementById("iSIDinput").value = ""; // Clear the form
+
+    
+ 
   });
 
   $("#set").click(() => {
