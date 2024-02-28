@@ -24,13 +24,17 @@ html
 					.col.s12
 						ul.tabs.grey.darken-4
 							li.tab.col.s3
-								a(href='#team_panel') Teams
+								a(href='#team_panel') Teams 
+									i.material-icons group
 							li.tab.col.s3
 								a(href='#player_panel') Players
+									i.material-icons person
 							li.tab.col.s3
 								a.active(href='#match') Create match
+									i.material-icons add
 							li.tab.col.s3
 								a(href='#huds') HUDs
+									i.material-icons list
 					#team_panel.col.s12
 						include teams.pug
 					#player_panel.col.s12

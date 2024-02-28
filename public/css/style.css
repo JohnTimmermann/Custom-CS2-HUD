@@ -22,3 +22,11 @@ table.highlight>tbody>tr:hover {
 .btn.disabled {
    background-color: #0e0e0e !important;
 }
+
+.tabs .material-icons {
+    position: relative;
+    top: 7px;
+    left: 5px;
+}
+
+
