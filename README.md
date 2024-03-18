@@ -14,9 +14,9 @@ I am going to be adding a few things to the default hud.
 - Option to Hide Players/Coaches - COMPLETED
 - Update Top Panel - Started
 - Bomb timer and Defuse timer updates
-- Map picks
-- Make admin panel look a bit better.
-- Add Custom Radar (Very far in future)
+- Map picks - STARTED
+- Make admin panel look a bit better. - STARTED
+- Add Custom Radar (Very far in future) - STARTED (thanks [fyflo](https://github.com/fyflo/CS2-CSGO-HUDS-Observer-fyflo))
 
 Hopefully it ends up looking very nice and lets a lot of people use it in their streams!
     
