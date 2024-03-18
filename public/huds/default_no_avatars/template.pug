@@ -86,8 +86,53 @@ html
           #radar_main
           #radar_second
         #radar
+          //- Comment out this iframe to take out the radar.
+          iframe(width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://localhost:36364") 
 
       //- End Radar Section
+
+      //- Vetos Section
+        //- Vetos needed above container to animate in, or else for some reason -
+        //- Vetos_Container is displayed as block when animated instead of flex
+      #Vetos 
+        #Vetos_Container 
+          #Vetos_Title
+            #map_picked Map
+            #picked_by Picked By
+            #won_by Winner
+          #Vetos_Maps
+            #map_1
+              #map_1_pick
+              #map_1_team
+                img(width="50px" height="50px")
+              #map_1_winner
+                img(width="50px" height="50px")
+            #map_2
+              #map_2_pick
+              #map_2_team
+                img(width="50px" height="50px")
+              #map_2_winner
+                img(width="50px" height="50px")
+            #map_3
+              #map_3_pick
+              #map_3_team
+                img(width="50px" height="50px")
+              #map_1_winner
+                img(width="50px" height="50px")
+            #map_4
+              #map_4_pick
+              #map_4_team
+                img(width="50px" height="50px")
+              #map_4_winner
+                img(width="50px" height="50px")
+            #map_5
+              #map_5_pick
+              #map_5_team
+                img(width="50px" height="50px")
+              #map_5_winner
+                img(width="50px" height="50px")
+
+      //- End Vetos section
      
       //- Players alive section
       #players_alive

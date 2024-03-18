@@ -162,6 +162,7 @@ app.get("/av/:sid([0-9]+)", (req, res) => {
     });
   }
 });
+
 io.on("connection", socket => {
   socket.on("update", data => {
     io.emit(data);

@@ -531,6 +531,68 @@ body {
 }
 /* End Players Alive section  */
 
+/* Start Vetos Section */
+#vetos {
+  width: 400px;
+  height: 270px;
+  position: absolute;
+  display: none;
+  right: 10px;
+  top: 10px;
+}
+
+#vetos img:not([src]){ display:none; } /* Removes the borders for images that are not loaded*/
+
+#Vetos_Container {
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+#Vetos_Title {
+  flex: .5;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#map_picked, #picked_by, #won_by {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+}
+#Vetos_Maps {
+  flex: 4;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+#map_1, #map_2, #map_3, #map_4, #map_5 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+#map_1_pick, #map_1_team, #map_1_winner, #map_2_pick, #map_2_team, #map_2_winner, #map_3_pick, #map_3_team, #map_3_winner, #map_4_pick, #map_4_team, #map_4_winner, #map_5_pick, #map_5_team, #map_5_winner {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+#map_1_pick, #map_2_pick, #map_3_pick, #map_4_pick, #map_5_pick {
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,0) 10%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 90%);
+}
+
+/* End Vetos Section */
+
 /* Start Radar Section */
 #radar_container {
   width: 382px;

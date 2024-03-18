@@ -49,7 +49,27 @@ $(document).ready(function () {
   var slotted = [];
   var meth = {
   
-
+    getVetos: function() {
+      if (!match) {return false;}
+      let vetos = {
+        map1_PICK: (match.map_1.map_pick),
+        map2_PICK: (match.map_2.map_pick),
+        map3_PICK: (match.map_3.map_pick),
+        map4_PICK: (match.map_4.map_pick),
+        map5_PICK: (match.map_5.map_pick),
+        map1_TEAM: this.loadTeam(match.map_1.map_team),
+        map2_TEAM: this.loadTeam(match.map_2.map_team),
+        map3_TEAM: this.loadTeam(match.map_3.map_team),
+        map4_TEAM: this.loadTeam(match.map_4.map_team),
+        map5_TEAM: this.loadTeam(match.map_5.map_team),
+        map1_WINNER: this.loadTeam(match.map_1.map_winner),
+        map2_WINNER: this.loadTeam(match.map_2.map_winner),
+        map3_WINNER: this.loadTeam(match.map_3.map_winner),
+        map4_WINNER: this.loadTeam(match.map_4.map_winner),
+        map5_WINNER: this.loadTeam(match.map_5.map_winner),
+      };
+      return vetos;
+    },
     getTeamOne: function () {
       if (!this.info.teams) return false;
       return this.loadTeam(this.info.teams.team_1.team);
@@ -280,7 +300,6 @@ $(document).ready(function () {
       if(!ignoredSteamIDs.includes(iSID)) { //If iSID is not already in ignoredSteamIDs, 
         ignoredSteamIDs.push(iSID); //push iSID to ignoredSteamIDs
       }
-
     });
   }
   load(listener);

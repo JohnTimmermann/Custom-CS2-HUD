@@ -1,7 +1,7 @@
 var io = io("http://" + ip + ":" + port + "/");
 function loadMatch(data) {
   loadTeams(teams => {
-    $teamList = $("#team_1, #team_2");
+    $teamList = $("#team_1, #team_2, #map_1_team, #map_1_winner, #map_2_team, #map_2_winner, #map_3_team, #map_3_winner, #map_4_team, #map_4_winner, #map_5_team, #map_5_winner");
     $teamList.html("<option value=null>NONE</option><option value='auto' selected>Try to match team automatically</option>");
 
     teams.forEach(function(team, id) {
@@ -25,6 +25,51 @@ function loadMatch(data) {
       $("#team_2")
         .val("auto")
         .val(data.team_2.team);
+      $("#map_1_pick")
+        .val("0")
+        .val(data.map_1.map_pick);
+      $("#map_1_team")
+        .val("0")
+        .val(data.map_1.map_team);
+      $("#map_1_winner")
+        .val("0")
+        .val(data.map_1.map_winner);
+      $("#map_2_pick")
+        .val("0")
+        .val(data.map_2.map_pick);
+      $("#map_2_team")
+        .val("0")
+        .val(data.map_2.map_team);
+      $("#map_2_winner")
+        .val("0")
+        .val(data.map_2.map_winner);
+      $("#map_3_pick")
+        .val("0")
+        .val(data.map_3.map_pick);
+      $("#map_3_team")
+        .val("0")
+        .val(data.map_3.map_team);
+      $("#map_3_winner")
+        .val("0")
+        .val(data.map_3.map_winner);
+      $("#map_4_pick")
+        .val("0")
+        .val(data.map_4.map_pick);
+      $("#map_4_team")
+        .val("0")
+        .val(data.map_4.map_team);
+      $("#map_4_winner")
+        .val("0")
+        .val(data.map_4.map_winner);
+      $("#map_5_pick")
+        .val("0")
+        .val(data.map_5.map_pick);
+      $("#map_5_team")
+        .val("0")
+        .val(data.map_5.map_team);
+      $("#map_5_winner")
+        .val("0")
+        .val(data.map_5.map_winner);
     }
     $("select").formSelect();
   });
@@ -34,6 +79,31 @@ $(document).ready(() => {
     console.log("Panel.js Connected to io");
   }
 
+    // Function to toggle visibility of MapCards based on the selected botype
+  function toggleMapCards(botype) {
+      if (botype === 'bo1') {
+          $('#Map1Card').show();
+          $('#Map2Card, #Map3Card, #Map4Card, #Map5Card').hide();
+      } else if (botype === 'bo3') {
+          $('#Map1Card, #Map2Card, #Map3Card').show();
+          $('#Map4Card, #Map5Card').hide();
+      } else if (botype === 'bo5') {
+          $('#Map1Card, #Map2Card, #Map3Card, #Map4Card, #Map5Card').show();
+      }  else if (botype === 'none') {
+        $('#Map1Card, #Map2Card, #Map3Card, #Map4Card, #Map5Card').hide();
+      }
+    }
+
+    // Event listener for botype change
+    $('#botype').change(() => {
+        const selectedBotype = $('#botype').val();
+        toggleMapCards(selectedBotype);
+    });
+    
+
+    // Initial toggle based on default botype value
+    toggleMapCards($('#botype').val());
+
   $("#iSIDButton").click(() => {
     let iSID = $("#iSIDinput").val().trim(); // iSID(ignoreSteamID)
     io.emit("hidePlayers", { iSID: iSID}); // Emit the data to the server
@@ -41,7 +111,6 @@ $(document).ready(() => {
     $(".chip-container").append(chip);
     document.getElementById("iSIDinput").value = ""; // Clear the form
 
-    
  
   });
 
@@ -55,7 +124,32 @@ $(document).ready(() => {
       team_2: {
         map_score: $("#team_2_score").val(),
         team: $("#team_2").val()
-      }
+      },
+      map_1: {
+        map_pick: $("#map_1_pick").val(),
+        map_team: $("#map_1_team").val(),
+        map_winner: $("#map_1_winner").val(),
+      },
+      map_2: {
+        map_pick: $("#map_2_pick").val(),
+        map_team: $("#map_2_team").val(),
+        map_winner: $("#map_2_winner").val(),
+      },
+      map_3: {
+        map_pick: $("#map_3_pick").val(),
+        map_team: $("#map_3_team").val(),
+        map_winner: $("#map_3_winner").val(),
+      },
+      map_4: {
+          map_pick: $("#map_4_pick").val(),
+          map_team: $("#map_4_team").val(),
+          map_winner: $("#map_4_winner").val(),
+        },
+      map_5: {
+          map_pick: $("#map_5_pick").val(),
+          map_team: $("#map_5_team").val(),
+          map_winner: $("#map_5_winner").val(),
+        }
     };
     io.emit("update_match", match);
   });
@@ -69,7 +163,32 @@ $(document).ready(() => {
       team_1: {
         map_score: $("#team_2_score").val(),
         team: $("#team_2").val()
-      }
+      },
+      map_1: {
+        map_pick: $("#map_1_pick").val(),
+        map_team: $("#map_1_team").val(),
+        map_winner: $("#map_1_winner").val(),
+      },
+      map_2: {
+        map_pick: $("#map_2_pick").val(),
+        map_team: $("#map_2_team").val(),
+        map_winner: $("#map_2_winner").val(),
+      },
+      map_3: {
+        map_pick: $("#map_3_pick").val(),
+        map_team: $("#map_3_team").val(),
+        map_winner: $("#map_3_winner").val(),
+      },
+      map_4: {
+          map_pick: $("#map_4_pick").val(),
+          map_team: $("#map_4_team").val(),
+          map_winner: $("#map_4_winner").val(),
+        },
+      map_5: {
+          map_pick: $("#map_5_pick").val(),
+          map_team: $("#map_5_team").val(),
+          map_winner: $("#map_5_winner").val(),
+        }
     };
     io.emit("update_match", match);
   });

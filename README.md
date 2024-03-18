@@ -1,4 +1,4 @@
-# CS2 Observer Custom HUD
+ # CS2 Observer Custom HUD
 
 Based off a fork from [osztenkurden](https://github.com/osztenkurden), [dionpirotta](https://github.com/dionpirotta), [kyrunic1](https://github.com/kyrunic1/)
 I am taking the work they have done and adding on top of it. Mainly plan on trying to make the code more readable for new people and make the default hud look a little better so more people can use it.
@@ -103,9 +103,9 @@ In Players tab you can define player's real name, displayed name, country flag (
 
 #### Create match tab
 
-Here you can set type of match - is this a map of NONE, BO1, BO3 or BO5, score for teams and which team it should load to HUD. In case players are on the wrong side (left/right) there is `SWAP` button to quickly tell the HUD to swap teams' name, logo and flag.
-Additionaly, if during the match you decide that there is a type in team's or player's information, you can change it (for example on mobile phone, if you allow Node through firewall and you are on the same local network) and then in this tab click the `Force Refresh HUD`, to make sure all the changes are applied. You can also enter players SteamdID64s that you want to hide/ignore and clicking `Hide Player`.
-![Ex3](https://i.imgur.com/0AjPqTz.png)
+Here you can set type of match - is this a map of NONE, BO1, BO3 or BO5, score for teams and which team it should load to HUD. Depending on which best of type you select, there will be options for you to select the vetos for the map. In case players are on the wrong side (left/right) there is `SWAP` button to quickly tell the HUD to swap teams' name, logo and flag.
+Additionaly, if during the match you decide that there is a type in team's or player's information, you can change it (for example on mobile phone, if you allow Node through firewall and you are on the same local network) and then in this tab click the `Force Refresh HUD`, to make sure all the changes are applied. You can also enter players SteamdID64s that you want to hide/ignore and clicking `Hide Player`. 
+![Ex3](https://i.imgur.com/zi3xbiV.png)
 ### HUDS
 
 This tab shows local HUDs. They are not validated whether or not they actually work, but if any of the files is missing, it will notify you in Warnings column.

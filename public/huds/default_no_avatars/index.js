@@ -28,6 +28,7 @@ var freezetime = false;
 function updatePage(data) {
   var matchup = data.getMatchType();
   var match = data.getMatch();
+  var vetos = data.getVetos();
   var team_one = data.getTeamOne();
   var team_two = data.getTeamTwo();
   var team_ct = data.getCT();
@@ -67,11 +68,13 @@ function updatePage(data) {
   updateTeamValues(teams.left, teams.right);
   countNades(teams.left, teams.right);
   playersAlive(teams); //Players alive count (Players alive: 5v5)
+  updateVetos(vetos,); // Vetos updating
   freezetime = round.phase == "freezetime";
   last_round = round_now;
 }
 
 function setupBestOf(matchup, match) {
+  $("#Vetos_Container").hide();
   if (matchup && matchup.toLowerCase() != "none") {
     if (matchup == "bo1") {
       $("#left_team .block2")
@@ -93,6 +96,12 @@ function setupBestOf(matchup, match) {
       $("#right_team .block5")
         .css("opacity", "1")
         .css("background-color", match.team_2.map_score >= 2 ? COLOR_WHITE : "");
+      $("#Vetos_Container").show();
+      $("#map_1").show();
+      $("#map_2").show();
+      $("#map_3").show();
+      $("#map_4").hide();
+      $("#map_5").hide();
     } else if (matchup == "bo5") {
       $("#left_team .block1")
         .css("opacity", "1")
@@ -112,8 +121,45 @@ function setupBestOf(matchup, match) {
       $("#right_team .block3")
         .css("opacity", "1")
         .css("background-color", match.team_2.map_score >= 3 ? COLOR_WHITE : "");
+      $("#Vetos_Container").show();
+      $("#map_1").show();
+      $("#map_2").show();
+      $("#map_3").show();
+      $("#map_4").show();
+      $("#map_5").show();
     }
   }
+}
+
+function updateVetos(vetos) {
+  if (!vetos) {
+    $("#vetos_container").css("display", "none");
+  } 
+  else {
+    $("#vetos_container").css("display", "flex");
+    $("#map_1").css("background-image", vetos.map1_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map1_PICK + (".png"));
+    $("#map_2").css("background-image", vetos.map2_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map2_PICK + (".png"));
+    $("#map_3").css("background-image", vetos.map3_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map3_PICK + (".png"));
+    $("#map_4").css("background-image", vetos.map4_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map4_PICK + (".png"));
+    $("#map_5").css("background-image", vetos.map5_PICK == "none" ? "none" : "url('/files/img/maps/" + vetos.map5_PICK + (".png"));
+    $("#map_1_team img").attr("src", vetos.map1_TEAM.logo == null ? "/storage/logo_CT_default.png" : "/storage/" + vetos.map1_TEAM.logo);
+    $("#map_2_team img").attr("src", vetos.map2_TEAM.logo == null ? "/storage/logo_T_default.png" : "/storage/" + vetos.map2_TEAM.logo);
+    $("#map_3_team img").attr("src", vetos.map3_TEAM.logo == null ? "/storage/logo_CT_default.png" : "/storage/" + vetos.map3_TEAM.logo);
+    $("#map_4_team img").attr("src", vetos.map4_TEAM.logo == null ? "/storage/logo_T_default.png" : "/storage/" + vetos.map4_TEAM.logo);
+    $("#map_5_team img").attr("src", vetos.map5_TEAM.logo == null ? "/storage/logo_CT_default.png" : "/storage/" + vetos.map5_TEAM.logo);
+    $("#map_1_pick").text(vetos.map1_PICK);
+    $("#map_2_pick").text(vetos.map2_PICK);
+    $("#map_3_pick").text(vetos.map3_PICK);
+    $("#map_4_pick").text(vetos.map4_PICK);
+    $("#map_5_pick").text(vetos.map5_PICK);
+    $("#map_1_winner img").attr("src", vetos.map1_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map1_WINNER.logo);
+    $("#map_2_winner img").attr("src", vetos.map2_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map2_WINNER.logo);
+    $("#map_3_winner img").attr("src", vetos.map3_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map3_WINNER.logo);
+    $("#map_4_winner img").attr("src", vetos.map4_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map4_WINNER.logo);
+    $("#map_5_winner img").attr("src", vetos.map5_WINNER.logo == null ? "data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" : "/storage/" + vetos.map5_WINNER.logo);
+
+  }
+
 }
 
 function updateTopPanel() {
@@ -254,6 +300,7 @@ function updateStateFreezetime(phase, previously) {
     $("#players_left #box_monetary").slideDown(500);
     $("#players_right #box_monetary").slideDown(500);
     $("#round_timer_text").css("color", COLOR_GRAY);
+    $("#Vetos").slideDown(500);
     if (previously.hasOwnProperty("round")) {
       if (previously.round.hasOwnProperty("win_team")) {
         if (previously.round.win_team == "CT") {
@@ -498,6 +545,7 @@ function updateStateLive(phase, bomb, players, previously) {
     if (checkPrev(previously, "freezetime")) {
       $("#players_left #box_monetary").slideUp(500);
       $("#players_right #box_monetary").slideUp(500);
+      $("#Vetos").slideUp(500);
     }
     if (phase.phase_ends_in <= 109.9) {
       $("#players_left #box_utility").slideUp(500);
