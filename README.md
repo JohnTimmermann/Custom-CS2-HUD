@@ -27,7 +27,7 @@ Best contact is discord: not_jt
 
 If you want to support me continuing to work on this:
 
-paypal.me/johntimmermann1
+patreon.com/JTMythic
 
 # Examples
 
