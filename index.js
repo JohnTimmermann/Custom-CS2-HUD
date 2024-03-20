@@ -182,10 +182,6 @@ io.on("connection", socket => {
   socket.on("refresh", data => {
     io.emit("refresh", data);
   });
-  //Receiving and emitting hidePlayers for coaches
-  socket.on("hidePlayers", data => {
-    io.emit("hidePlayers", data);
-  });
 });
 
 express.listen(config.ServerPort, address || "localhost", () => {

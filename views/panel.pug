@@ -12,7 +12,7 @@
 
 .row
 	.col.s5.offset-s1
-		.card.small.blue-grey.darken-4
+		.card.medium.blue-grey.darken-4
 			.card-content
 				.card-title(style="text-align:center;")
 					h4 Team 1
@@ -27,8 +27,11 @@
 					select#team_1.icons
 						option(value=null) NONE
 					label Set team 1
+				.input-field.col.s12
+					input#team_1_coach.validate(placeholder='Enter in SteamID64', type='text')
+					label Hide team 1 coach
 	.col.s5
-		.card.small.blue-grey.darken-4
+		.card.medium.blue-grey.darken-4
 			.card-content
 				.card-title(style="text-align:center;")
 					h4 Team 1
@@ -43,6 +46,9 @@
 					select#team_2.icons
 						option(value=null) NONE
 					label Set team 2
+				.input-field.col.s12
+					input#team_2_coach.validate(placeholder='Enter in SteamID64', type='text')
+					label Hide team 2 coach 
 
 .row
 	.col.s12
@@ -157,16 +163,6 @@
 						select#map_5_winner
 							option(value=NULL, selected) None
 						label Team that won
-
-.row
-	.col.s6.offset-s3(style="text-align:center;")
-		#ignoredSteamIDs
-			.input-field.col.s12.m12
-				input#iSIDinput.validate(placeholder='Enter in SteamID64', type='text')
-				label SteamID64 to Hide
-				a.waves-effect.waves-light.btn#iSIDButton Hide Player
-				blockquote If you refresh your hud, you will need to refresh the panel page, and resubmit the SteamIDs
-			.chip-container
 
 .row
 	.input-field.col.s12

@@ -279,6 +279,14 @@ $(document).ready(function () {
   function listener(players, teams) {
     io.on("match", function (data) {
       match = data;
+      coach1 = data.team_1.coach;
+      if(!ignoredSteamIDs.includes(coach1)) { 
+        ignoredSteamIDs.push(coach1);
+       }
+      coach2 = data.team_2.coach;
+      if(!ignoredSteamIDs.includes(coach2)) { 
+        ignoredSteamIDs.push(coach2);
+       }
     });
     io.on("update", function (json) {
       json.teams = match;
@@ -293,14 +301,6 @@ $(document).ready(function () {
       location.reload();
     });
     io.emit("ready", true);
-
-    //Listening for hidPlayers - Also needed in index.js in root folder
-    io.on("hidePlayers", function(data) { 
-      const iSID = data.iSID; //Setting iSID to the value of the parameter given data, and accessing iSID with dot operator
-      if(!ignoredSteamIDs.includes(iSID)) { //If iSID is not already in ignoredSteamIDs, 
-        ignoredSteamIDs.push(iSID); //push iSID to ignoredSteamIDs
-      }
-    });
   }
   load(listener);
 });

@@ -25,6 +25,12 @@ function loadMatch(data) {
       $("#team_2")
         .val("auto")
         .val(data.team_2.team);
+      $("#team_1_coach")
+        .val("0")
+        .val(data.team_1.coach);
+      $("#team_2_coach")
+        .val("0")
+        .val(data.team_2.coach);
       $("#map_1_pick")
         .val("0")
         .val(data.map_1.map_pick);
@@ -104,26 +110,18 @@ $(document).ready(() => {
     // Initial toggle based on default botype value
     toggleMapCards($('#botype').val());
 
-  $("#iSIDButton").click(() => {
-    let iSID = $("#iSIDinput").val().trim(); // iSID(ignoreSteamID)
-    io.emit("hidePlayers", { iSID: iSID}); // Emit the data to the server
-    let chip = $(`<div class="chip"><span class="chip-text">Hiding: ${iSID}</span></div>`);
-    $(".chip-container").append(chip);
-    document.getElementById("iSIDinput").value = ""; // Clear the form
-
- 
-  });
-
   $("#set").click(() => {
     let match = {
       match: $("#botype").val(),
       team_1: {
         map_score: $("#team_1_score").val(),
-        team: $("#team_1").val()
+        team: $("#team_1").val(),
+        coach: $("#team_1_coach").val(),
       },
       team_2: {
         map_score: $("#team_2_score").val(),
-        team: $("#team_2").val()
+        team: $("#team_2").val(),
+        coach: $("#team_2_coach").val(),
       },
       map_1: {
         map_pick: $("#map_1_pick").val(),
@@ -158,11 +156,14 @@ $(document).ready(() => {
       match: $("#botype").val(),
       team_2: {
         map_score: $("#team_1_score").val(),
-        team: $("#team_1").val()
+        team: $("#team_1").val(),
+        coach: $("#team_1_coach").val()
+
       },
       team_1: {
         map_score: $("#team_2_score").val(),
-        team: $("#team_2").val()
+        team: $("#team_2").val(),
+        coach: $("#team_2_coach").val()
       },
       map_1: {
         map_pick: $("#map_1_pick").val(),
