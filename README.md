@@ -1,3 +1,6 @@
+ # DEPRECIATED: PLEASE USE https://github.com/JohnTimmermann/OpenHud INSTEAD
+ 
+ 
  # CS2 Observer Custom HUD
 
 Based off a fork from [osztenkurden](https://github.com/osztenkurden), [dionpirotta](https://github.com/dionpirotta), [kyrunic1](https://github.com/kyrunic1/)
